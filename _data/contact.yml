@@ -26,6 +26,7 @@
 # - type: stack-overflow
 #   icon: 'fab fa-stack-overflow'
 #   url:  ''                  # Fill with your stackoverflow homepage
+<<<<<<< HEAD
 #
 # - type: bluesky
 #   icon: 'fa-brands fa-bluesky'
@@ -38,3 +39,5 @@
 # - type: threads
 #   icon: 'fa-brands fa-threads'
 #   url: ''                   # Fill with your Threads profile link
+=======
+>>>>>>> 86ecc71 (Initial commit)
