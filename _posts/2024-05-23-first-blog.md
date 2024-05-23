@@ -1,5 +1,4 @@
 ---
-layout: blog
 media_subpath: assets/img/uploads/
 title: First blog
 date: 2024-05-23T13:49:00.000Z
