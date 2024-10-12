@@ -17,16 +17,10 @@ package-lock.json
 
 # IDE configurations
 .idea
-<<<<<<< HEAD
 .vscode/*
 !.vscode/settings.json
 !.vscode/extensions.json
 !.vscode/tasks.json
-=======
-.vscode
-!.vscode/settings.json
-!.vscode/extensions.json
->>>>>>> 86ecc71 (Initial commit)
 
 # Misc
 _sass/dist
