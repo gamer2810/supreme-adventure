@@ -41,7 +41,7 @@ order: 4
         <p><strong>University of Science - VNUHCM</strong><br>
         Ho Chi Minh, Viet Nam<br>
         Bachelor of Science, Computer Science. 3.38 <span style="text-align: right;">Graduated 2020</span><br>
-    </div>
+    <!-- </div> -->
 
     <div class="section">
         <div class="section-title">Experience</div>
@@ -94,4 +94,4 @@ order: 4
         </ul>
     </div> -->
 
-</body>
+<!-- </body> -->
