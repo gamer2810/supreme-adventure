@@ -14,16 +14,16 @@ timezone: Etc/GMT+5
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: K3K.dev # the main title
+title: K3K's Archive # the main title
 
-tagline: A personal blog # it will display as the sub-title
+tagline: Computer Science student pursuing my Master's at Western Illinois University. Open to internship opportunities. # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
   A Computer Science student pursuing a Master's Degree. Will write just about anything.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://gamer2810.github.io"
+url: "https://k3k.dev"
 
 github:
   username: gamer2810 # change to your github username
@@ -59,7 +59,7 @@ webmaster_verifications:
 # Web Analytics Settings
 analytics:
   google:
-    id: # fill in your Google Analytics ID
+    id: G-2HE0EQFNF5
   goatcounter:
     id: supreme-adventure
   umami:
@@ -148,7 +148,7 @@ pwa:
 paginate: 10
 
 # The base URL of your site
-baseurl: "/supreme-adventure"
+baseurl: "/"
 
 # ------------ The following options are not recommended to be modified ------------------
 
