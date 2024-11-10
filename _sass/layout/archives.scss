@@ -58,8 +58,9 @@
     li {
       font-size: 1.1rem;
       line-height: 3rem;
-
-      @extend %text-ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
 
       &:nth-child(odd) {
         background-color: var(--main-bg, #ffffff);

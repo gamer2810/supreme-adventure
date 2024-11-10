@@ -74,8 +74,9 @@
 
         > div:first-child {
           display: block;
-
-          @extend %text-ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
     }
