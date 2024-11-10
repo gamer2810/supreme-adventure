@@ -4,6 +4,8 @@ icon: fas fa-info-circle
 order: 4
 ---
 
+<a href="../assets/resume/mktran-resume2025.pdf" download="mktran_resume.pdf">Download as PDF</a>
+
 <object 
     data="../assets/resume/mktran-resume2025.pdf#view=FitW" 
     style="width: 100%; height: 82vh; display: block;" 
