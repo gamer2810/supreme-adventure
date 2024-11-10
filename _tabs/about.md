@@ -10,7 +10,7 @@ order: 4
     type='application/pdf'
     >
 
-<iframe src="https://docs.google.com/viewer?url=https://ark.k3k.dev/assets/resume/mktran-resume2025.pdf#view=FitW" 
+<iframe src="https://docs.google.com/viewer?url=https://ark.k3k.dev/assets/resume/mktran-resume2025.pdf#view=FitW&embedded=true" 
     style="width: 100%; height: 82vh; display: block;" frameborder="0"></iframe>
 
 </object>
