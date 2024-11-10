@@ -1,6 +1,6 @@
 ---
 media_subpath: assets/img/uploads/
-title: "Power Up Your Blog on GitHub: Effortless Online Editing and Free Hosting"
+title: Power Up Your Blog on GitHub: Effortless Online Editing and Free Hosting
 date: November 9, 2024 3:46 PM
 categories:
   - guide
@@ -9,8 +9,8 @@ tags:
   - cms
   - decap
   - blog
-description: Deploy your own blog with the ability to add/edit content straight
-  from the web with GitHub, Jekyll and DecapCMS.
+description: "Deploy your own blog with the ability to add/edit content straight
+  from the web with GitHub, Jekyll and DecapCMS."
 toc: true
 comments: true
 ---
