@@ -10,7 +10,6 @@ tags:
   - decap
   - blog
 description: "Deploy your own blog with the ability to add/edit content straight from the web with GitHub, Jekyll and DecapCMS."
-toc: true
 comments: true
 ---
 ## Why Add a CMS to Your Jekyll Blog on GitHub?
