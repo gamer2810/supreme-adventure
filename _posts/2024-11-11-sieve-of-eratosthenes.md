@@ -26,7 +26,7 @@ Create a boolean array from [1,max], marking every prime number `true` and non-p
         * Start from `i*i`:
             * Mark all multiplier of `j` (`2j`,`3j`,...) that is smaller than `max` as `false` 
 
-> Why starts from `i*i`?
+> Why starts from `i*i`?  
 Because every number less than i2 is either a prime or has a divisor less than i.
 Reason: if it has two divisors at least i, then its value is at least i2.
 {: .prompt-info }
