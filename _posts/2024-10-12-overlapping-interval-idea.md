@@ -5,7 +5,7 @@ date: October 12, 2024 12:53 AM
 categories: LeetCode
 tags:
   - algorithm
-  - leetCode
+  - leetcode
 description: "Solving LeetCode problem 2406: Divide Intervals Into Minimum Number of Groups"
 comments: true
 ---

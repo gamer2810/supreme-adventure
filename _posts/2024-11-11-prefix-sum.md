@@ -7,8 +7,8 @@ categories:
 tags:
   - algorithm
   - snippet
-  - LeetCode
-  - Java
+  - leetcode
+  - java
 description: Pre-calculate and store the sum of elements from the start of the
   array to the current element.
 toc: false
