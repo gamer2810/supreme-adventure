@@ -4,8 +4,8 @@ title: Overlapping Interval Idea
 date: October 12, 2024 12:53 AM
 categories: LeetCode
 tags:
-  - Algorithm
-  - LeetCode
+  - algorithm
+  - leetCode
 description: "Solving LeetCode problem 2406: Divide Intervals Into Minimum Number of Groups"
 comments: true
 ---

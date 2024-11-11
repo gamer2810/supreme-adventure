@@ -7,8 +7,8 @@ categories:
 tags:
   - algorithm
   - snippet
-  - LeetCode
-  - Java
+  - leetcode
+  - java
 description: Find all prime number in the range [1, max]
 toc: false
 comments: true
