@@ -44,3 +44,6 @@ Reason: if it has two divisors at least i, then its value is at least i2.
             }
         }
 ```
+
+## Example LeetCode problem
+[Prime Subtraction Operation](https://leetcode.com/problems/prime-subtraction-operation/)
