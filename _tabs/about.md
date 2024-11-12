@@ -10,6 +10,7 @@ order: 4
   gap: 3rem;
   display:flex;
   flex-wrap: wrap-reverse;
+  justify-content: center; 
   "
 >
   <div>
