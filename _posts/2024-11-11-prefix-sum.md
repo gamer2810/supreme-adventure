@@ -37,3 +37,9 @@ Create an integer array with the same size `n`, storing the sum at each element.
 
 ## Recommended reads
 https://usaco.guide/silver/prefix-sums?lang=cpp
+
+## Interesting properties
+1. If two prefix sum have the same remainder when divided by `k`, then the subarray between them is divisible by `k`.
+
+## Problems
+https://www.hackerrank.com/challenges/k-subarrays/problem
