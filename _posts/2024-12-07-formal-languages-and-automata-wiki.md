@@ -13,11 +13,11 @@ toc: true
 comments: true
 ---
 # Set Operation
-L~1~ ∪ L~2~: union
+L<sub>1</sub>∪L<sub>2</sub>: union
 
-L~1~L~2~: concatenation
+L<sub>1</sub>L<sub>2</sub>: concatenation
 
-L~1~*: Kleene's star 
+L<sub>1</sub>\*: Kleene's star 
 
 # String, Alphabet and Language
 An alphabet is a set of letters
@@ -50,23 +50,23 @@ Given an alphabet Σ:
 
 {a} where a ∈ Σ is a regular language
 
-If L~1~, L~2~ are two regular languages then:
+If L<sub>1</sub>, L<sub>2</sub> are two regular languages then:
 
-L~1~ ∪ L~2~ is regular
+L<sub>1</sub>∪L<sub>2</sub> is regular
 
-L~1~L~2~ is regular
+L<sub>1</sub>L<sub>2</sub> is regular
 
-L~1~*, L~2~* are regular
+L<sub>1</sub>\*, L<sub>2</sub>\* are regular
 
-## Kleene's Theorem:
+## Kleene's Theorem
 
 Given a DFA, the language it accepts must be regular.
 
-## Transformation sequence:
+## Transformation sequence
 
 Regular expression -> NFA with Λ-transitions -> NFA without Λ-transitions -> DFA -> Minimal DFA
 
-## Related Knowledge:
+## Related Knowledge
 - Subset construction (NFA without Λ-transitions -> DFA)
 - Minimalization algorithm (DFA -> Minimal DFA)
 - Regular expression equivalence of set operations (Regular expression -> NFA with Λ-transitions)
@@ -81,19 +81,19 @@ Production rules and how to generate a string from a grammar
 ## Combining CFGs
 
 Union:
-S -> A | B
+`S -> A | B`
 
 Concatenation:
-S -> AB
+`S -> AB`
 
 Kleene's Star:
-S -> aS | Λ
+`S -> aS | Λ`
 
 ## Useful CFG
 
 Palindrome CFG for Σ = {a,b}:
 
-S -> aSa | bSb | a | b | Λ
+`S -> aSa | bSb | a | b | Λ`
 
 ## Push-down Automata
 
@@ -135,9 +135,9 @@ e(p)0e(a)0e(q)0e(b)0e(D)
 ##### State encoding: 
 a sequence of 1s
 
-1 = h~a~ 
+1 = h<sub>a</sub> 
 
-11 = h~r~
+11 = h<sub>r</sub>
 
 ##### Character encoding: 
 a sequence of 1s
