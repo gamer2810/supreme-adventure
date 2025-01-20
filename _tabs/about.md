@@ -52,6 +52,6 @@ order: 4
     type='application/pdf'
     > -->
 
-  <iframe src="https://1drv.ms/b/c/b2077bd16acadf4a/IQRGsEGQalvHTZxKeTEkTAr5AT7ZqvjGAiErdnoLYlQlBSc" width="100%" height="100%" frameborder="0" scrolling="no"></iframe>
+  <iframe src="https://1drv.ms/b/c/b2077bd16acadf4a/IQRGsEGQalvHTZxKeTEkTAr5AT7ZqvjGAiErdnoLYlQlBSc" width="100%" height="80vh" frameborder="0" scrolling="no"></iframe>
 
 <!-- </object> -->
