@@ -46,12 +46,13 @@ order: 4
 
 <a href="../assets/resume/mktran-resume2025.pdf" download="mktran_resume.pdf">Download as PDF</a>
 
-<!-- <object 
-    data="../assets/resume/mktran-resume2025.pdf#view=FitW" 
-    style="width: 100%; height: 82vh; display: block;" 
-    type='application/pdf'
-    > -->
-
-  <iframe src="https://1drv.ms/b/c/b2077bd16acadf4a/IQRGsEGQalvHTZxKeTEkTAr5AT7ZqvjGAiErdnoLYlQlBSc" loading="lazy" width="100%" height="800px" frameborder="0" scrolling="no"></iframe>
-
-<!-- </object> -->
+<div>
+<img 
+  style="
+  width: 800px;
+  height: 1000px;
+  "
+  src="../assets/resume/mktran-resume.avif"
+  alt="Resume PDF preview"
+>
+</div>
