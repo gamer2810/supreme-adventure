@@ -42,7 +42,7 @@ order: 4
 </div>
 
 
-## Professional Software Engineering resume
+## Resume
 
 <a href="../assets/resume/mktran-resume2025.pdf" download="mktran_resume.pdf">Download as PDF</a>
 
