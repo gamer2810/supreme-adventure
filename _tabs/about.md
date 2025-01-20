@@ -37,7 +37,7 @@ order: 4
   float: left;
   margin: .75rem 1rem 1.5rem 1 rem !important;
   "
-  src="../assets/img/preview/preview.jpg"
+  src="../assets/img/preview/preview.avif"
   alt="avatar">
 </div>
 
