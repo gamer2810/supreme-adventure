@@ -18,9 +18,7 @@ comments: true
 ---
 ## Prerequisite: Install WSL 2
 
-Reference: https://learn.microsoft.com/en-us/windows/wsl/install
-
-## Step 1: Install WSL
+Reference: <https://learn.microsoft.com/en-us/windows/wsl/install>
 
 Open your Command Prompt and run this command to have wsl installed 
 
@@ -29,6 +27,8 @@ wsl --install
 ```
 
 ## Step 2: Install Ollama on WSL
+
+Reference: <https://ollama.com/download/linux>
 
 Wait for the WSL installation to complete.
 
@@ -56,6 +56,8 @@ ollama run deepseek-r1:7b
 
 ## Step 4: Install uv
 
+Reference: <https://docs.astral.sh/uv/getting-started/installation/>
+
 You may have to install `curl` using `sudo apt install curl`
 
 Then run this command to install uv
@@ -65,6 +67,9 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
 ## Step 5: Install Open Web UI
+
+Reference: <https://github.com/open-webui/open-webui>
+Make sure to check out their troubleshooting section.
 
 Make sure there is no process listening on port 8080 on the *windows* interface.
 
