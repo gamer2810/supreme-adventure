@@ -23,7 +23,7 @@ By definition, Big-O notation defines a lower bound for a function.
 
 i.e.: 
 
-\\[ f(n) \eq O(n) \Longleftrightarrow f(n) \leq c*n, with c \gte 0 and n \gte n_{0} \]
+\[ f(n) \eq O(n) \Longleftrightarrow f(n) \leq c*n, with c \gte 0 and n \gte n_{0} \]
 
 We use mathematical induction to prove that there exists a c and $n_{0}$ that satisfies the above equation.
 
