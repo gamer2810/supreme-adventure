@@ -20,81 +20,46 @@ math: false
 
 Please read through at least once to understand what it is trying to do before running it.
 
+```bash
+#!/bin/bash
 
+# Exit script on error
+set -e
 
-\`\``bash
-
-\#!/bin/bash
-
-
-
-\# Ensure curl is installed
-
+# Ensure curl is installed
 sudo apt update && sudo apt install -y curl
 
-
-
-\# Install Ollama
-
+# Install Ollama
 if ! command -v ollama &> /dev/null
-
 then
-
-\    curl -fsSL https://ollama.com/install.sh | sh
-
+    curl -fsSL https://ollama.com/install.sh | sh
 fi
 
-
-
-\# Download and run DeepSeek R-1 model
-
+# Download DeepSeek R-1 model
 ollama run deepseek-r1:7b -d
 
-
-
-\# Install uv
-
+# Install uv
 if ! command -v uv &> /dev/null
-
 then
-
-\    curl -LsSf https://astral.sh/uv/install.sh | sh
-
+    curl -LsSf https://astral.sh/uv/install.sh | sh
 fi
 
-
-
-\# Install and start Open Web UI using Docker
-
+# Install and start Open Web UI using Docker
 if ! command -v docker &> /dev/null
-
 then
-
-\    echo "Docker is not installed. Please install Docker manually."
-
-\    exit 1
-
+    echo "Docker is not installed. Please install Docker manually."
+    exit 1
 fi
-
-
 
 docker run -d --network=host -v open-webui:/app/backend/data \
+    -e OLLAMA_BASE_URL=http://127.0.0.1:11434 \
+    --name open-webui --restart always \
+    ghcr.io/open-webui/open-webui:main
 
-\-e OLLAMA_BASE_URL=http://127.0.0.1:11434 \
-
-\--name open-webui --restart always \
-
-\    ghcr.io/open-webui/open-webui:main
-
-
-
-\# Output success message
-
+# Output success message
 echo "Setup complete! Open your browser and visit http://localhost:8080 to start chatting."
 
-
-
-\`\``
+```
 
 ## Prerequisite: Install WSL 2
 
