@@ -1,5 +1,4 @@
 ---
-media_subpath: assets/img/uploads/
 title: Run Deepseek R-1 on your NVIDIA-powered Windows laptop
 date: February 2, 2025 7:10 PM
 categories:
@@ -16,11 +15,12 @@ description: A very short walkthrough with ready-to-run commands to install
 toc: true
 comments: true
 ---
+
 ## Prerequisite: Install WSL 2
 
 Reference: <https://learn.microsoft.com/en-us/windows/wsl/install>
 
-Open your Command Prompt and run this command to have wsl installed 
+Open your Command Prompt and run this command to have wsl installed
 
 ```bash
 wsl --install
@@ -40,7 +40,7 @@ curl -fsSL https://ollama.com/install.sh | sh
 
 ## Step 3: Install Deepseek R-1 model
 
-Now you can install your favorite Deepseek R-1 model. 
+Now you can install your favorite Deepseek R-1 model.
 
 They are listed here: [Ollama's Deepseek R-1](https://ollama.com/library/deepseek-r1:7b)
 
@@ -71,7 +71,7 @@ curl -LsSf https://astral.sh/uv/install.sh | sh
 Reference: <https://github.com/open-webui/open-webui>
 Make sure to check out their troubleshooting section.
 
-Make sure there is no process listening on port 8080 on the *windows* interface.
+Make sure there is no process listening on port 8080 on the _windows_ interface.
 
 Run the following command on WSL:
 

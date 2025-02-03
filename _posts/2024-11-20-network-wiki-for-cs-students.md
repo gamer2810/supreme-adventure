@@ -1,5 +1,4 @@
 ---
-media_subpath: assets/img/uploads/
 title: Network Wiki for CS Students
 date: November 19, 2024 12:54 PM
 categories:
@@ -14,6 +13,7 @@ description: A list of concepts taught in Computer Network course for reference 
 toc: true
 comments: true
 ---
+
 ## Resources
 
 Lectures: <https://gaia.cs.umass.edu/kurose_ross/lectures.php>
@@ -25,14 +25,15 @@ Lectures: <https://gaia.cs.umass.edu/kurose_ross/lectures.php>
    Key concepts: CDN
 
    Unit: Data
+
 2. Transport Layer
 
-   Key concepts: 
+   Key concepts:
 
-* TCP
-* TCP packet structure (header - payload)
-* Checksum Error Checking
-* RDT (Reliable Data Transmission) Protocol 1.0-3.0
+- TCP
+- TCP packet structure (header - payload)
+- Checksum Error Checking
+- RDT (Reliable Data Transmission) Protocol 1.0-3.0
 
   Unit: Packets
 
@@ -41,14 +42,16 @@ Lectures: <https://gaia.cs.umass.edu/kurose_ross/lectures.php>
    Key concept: Data plane, Control plane, Switching Packets, IPv4, IPv6
 
    Unit: Datagrams
-2. Link Layer
+
+4. Link Layer
 
    Key concept: Routing algorithms, CSMA/CD, CRC error checking, ARP protocol
 
    Unit: Frames
-3. Physical Layer
 
-   Key concept: 
+5. Physical Layer
+
+   Key concept:
 
    Unit: (Wave/Optic) Signal
 

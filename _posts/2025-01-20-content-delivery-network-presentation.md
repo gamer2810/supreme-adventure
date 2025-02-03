@@ -1,5 +1,4 @@
 ---
-media_subpath: assets/img/uploads/
 title: Content Delivery Network Presentation
 date: January 20, 2025 10:29 AM
 categories:
