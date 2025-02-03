@@ -33,9 +33,9 @@ In another word, we want to show that the left hand side $f(n)$ is less than or 
 
 ### Example:
 
-**Proving merge sort runtime is $O(n*lgn)$**
+**Proving merge sort runtime is $O(n \log n)$**
 
-To prove that Merge Sort has a runtime of (O(n \log n)) using the substitution method, we'll follow these steps:
+To prove that Merge Sort has a runtime of $O(n \log n)$ using the substitution method, we'll follow these steps:
 
 1. **Understand the Recurrence Relation**:\
    The time complexity of Merge Sort can be described by the recurrence relation:
@@ -44,7 +44,7 @@ To prove that Merge Sort has a runtime of (O(n \log n)) using the substitution m
 
    This means that to sort an array of size (n), we recursively sort two subarrays each of size (\frac{n}{2}), and then merge them, which takes linear time.
 2. **Assume a Form for the Solution**:\
-   We aim to show that (T(n)) is bounded above by (O(n \log n)). Let's assume:
+   We aim to show that $T(n)$ is bounded above by $O(n \log n)$. Let's assume:
 
    $$T(n) \leq k \cdot n \log n$$
 
