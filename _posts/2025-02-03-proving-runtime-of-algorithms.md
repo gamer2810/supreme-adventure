@@ -10,6 +10,7 @@ tags:
   - proving-runtime
 description: How to prove the Big-O notation, i.e. the runtime of algorithms
 toc: true
+math: true
 comments: true
 ---
 There are 3 major methods and 1 advanced method:
