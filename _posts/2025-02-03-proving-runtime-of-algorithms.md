@@ -41,6 +41,8 @@ In another word, we want to show that the left hand side $f(n)$ is less than or 
 
 
 
-Method 2: Iteration
+## Method 2: Iteration (To be updated)
 
-Method 3: The master method (To be updated)
+
+
+## Method 3: The master method (To be updated)
