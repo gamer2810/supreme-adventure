@@ -7,10 +7,10 @@ backend:
     delete: Delete {{collection}} “{{slug}}”
     uploadMedia: Upload “{{path}}”
     deleteMedia: Delete “{{path}}”
-    openAuthoring: '{{message}}'
+    openAuthoring: "{{message}}"
   site_domain: 96a648f7-90d1-4c51-9537-c9ed7086b828
 
-media_folder: "assets/img/uploads"
+media_folder: "assets/img/uploads/"
 
 collections:
   - name: "blog" # Used in routes, e.g., /admin/collections/blog
@@ -20,12 +20,30 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       # - { label: "Layout", name: "layout", widget: "hidden", default: "blog" }
-      - { label: "Media Subpath", name: "media_subpath", widget: "hidden", default: "assets/img/uploads/" }
+      # - {
+      #     label: "Media Subpath",
+      #     name: "media_subpath",
+      #     widget: "hidden",
+      #     default: "assets/img/uploads/",
+      #   }
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime", date_format: "DD.MM.YYYY", time_format: "HH:mm:ssZ[Z]", format: "LLL", picker_utc: false }
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          date_format: "DD.MM.YYYY",
+          time_format: "HH:mm:ssZ[Z]",
+          format: "LLL",
+          picker_utc: false,
+        }
       - { label: "Categories", name: "categories", widget: "list" }
       - { label: "Tags", name: "tags", widget: "list" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "TOC", name: "toc", widget: "boolean", default: true }
-      - { label: "Comments", name: "comments", widget: "boolean", default: true }
+      - {
+          label: "Comments",
+          name: "comments",
+          widget: "boolean",
+          default: true,
+        }
       - { label: "Body", name: "body", widget: "markdown" }
