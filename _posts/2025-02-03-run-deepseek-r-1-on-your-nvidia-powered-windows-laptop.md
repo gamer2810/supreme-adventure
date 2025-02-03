@@ -15,18 +15,17 @@ description: A very short walkthrough with ready-to-run commands to install
 toc: true
 comments: true
 ---
-
 ## Prerequisite: Install WSL 2
 
 Reference: <https://learn.microsoft.com/en-us/windows/wsl/install>
 
-Open your Command Prompt and run this command to have wsl installed
+Open your Command Prompt and run this command to have WSL installed
 
 ```bash
 wsl --install
 ```
 
-## Step 2: Install Ollama on WSL
+## Step 1: Install Ollama on WSL
 
 Reference: <https://ollama.com/download/linux>
 
@@ -38,7 +37,7 @@ Run the following command on your WSL console:
 curl -fsSL https://ollama.com/install.sh | sh
 ```
 
-## Step 3: Install Deepseek R-1 model
+## Step 2: Install Deepseek R-1 model
 
 Now you can install your favorite Deepseek R-1 model.
 
@@ -54,7 +53,7 @@ Run the following command on your WSL console:
 ollama run deepseek-r1:7b
 ```
 
-## Step 4: Install uv
+## Step 3: Install uv
 
 Reference: <https://docs.astral.sh/uv/getting-started/installation/>
 
@@ -66,12 +65,14 @@ Then run this command to install uv
 curl -LsSf https://astral.sh/uv/install.sh | sh
 ```
 
-## Step 5: Install Open Web UI
+## Step 4: Install Open Web UI
 
 Reference: <https://github.com/open-webui/open-webui>
+
+[](https://github.com/open-webui/open-webui)
 Make sure to check out their troubleshooting section.
 
-Make sure there is no process listening on port 8080 on the _windows_ interface.
+Make sure there is no process listening on port 8080 on the *windows* interface.
 
 Run the following command on WSL:
 
@@ -79,7 +80,7 @@ Run the following command on WSL:
 docker run -d --network=host -v open-webui:/app/backend/data -e OLLAMA_BASE_URL=http://127.0.0.1:11434 --name open-webui --restart always ghcr.io/open-webui/open-webui:main
 ```
 
-## Step 6: Start chatting!
+## Step 5: Start chatting!
 
 Go to http://localhost:8080/ on your windows browser, setup a locally-saved account and start chatting with the model.
 
