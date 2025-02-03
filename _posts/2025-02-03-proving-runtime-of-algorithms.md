@@ -39,7 +39,9 @@ To prove that Merge Sort has a runtime of (O(n \log n)) using the substitution m
 
 1. **Understand the Recurrence Relation**:\
    The time complexity of Merge Sort can be described by the recurrence relation:\
-   $$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$ \
+
+   $$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$
+
    This means that to sort an array of size (n), we recursively sort two subarrays each of size (\frac{n}{2}), and then merge them, which takes linear time.
 2. **Assume a Form for the Solution**:\
    We aim to show that (T(n)) is bounded above by (O(n \log n)). Let's assume:\
@@ -49,27 +51,44 @@ To prove that Merge Sort has a runtime of (O(n \log n)) using the substitution m
    Substitute our assumed upper bound into the recurrence relation to see if it holds.
 4. **Expand the Recurrence Relation**:\
    Using the assumption, substitute $(T\left(\frac{n}{2}\right))$:\
-   $$T(n) = 2T\left(\frac{n}{2}\right) + O(n) \leq 2\left(k \cdot \frac{n}{2} \log \frac{n}{2}\right) + O(n)$$ \
-   Simplify $(2 \cdot \frac{n}{2})$:\
+
+   $$T(n) = 2T\left(\frac{n}{2}\right) + O(n) \leq 2\left(k \cdot \frac{n}{2} \log \frac{n}{2}\right) + O(n)$$ 
+
+   Simplify $(2 \cdot \frac{n}{2})$:
+
    $$T(n) \leq k \cdot n \log \frac{n}{2} + O(n)$$
+
 5. **Simplify the Logarithmic Term**:\
-   Use the logarithmic identity $(\log \frac{n}{2} = \log n - \log 2)$:\
-   $$T(n) \leq k \cdot n (\log n - \log 2) + O(n)$$ \
-   Expand the terms:\
+   Use the logarithmic identity $(\log \frac{n}{2} = \log n - \log 2)$:
+
+   $$T(n) \leq k \cdot n (\log n - \log 2) + O(n)$$ 
+
+   Expand the terms:
+
    $$T(n) \leq k \cdot n \log n - k \cdot n \log 2 + O(n)$$
+
 6. **Compare with the Assumed Bound**:\
-   Our goal is to show that:\
-   $$k \cdot n \log n \geq k \cdot n \log n - k \cdot n \log 2 + O(n)$$ \
-   Subtract (k \cdot n \log n) from both sides:\
-   $$0 \geq -k \cdot n \log 2 + O(n)$$ \
-   Rearranging terms:\
+   Our goal is to show that:
+
+   $$k \cdot n \log n \geq k \cdot n \log n - k \cdot n \log 2 + O(n)$$ 
+
+   Subtract (k \cdot n \log n) from both sides:
+
+   $$0 \geq -k \cdot n \log 2 + O(n)$$ 
+
+   Rearranging terms:
+
    $$k \cdot n \log 2 \geq O(n)$$
+
 7. **Determine the Constant (k)**:\
-   To satisfy the inequality, choose (k) such that:\
+   To satisfy the inequality, choose (k) such that:
+
    $$k \geq \frac{c}{\log 2}$$
+
    where (c) is the constant from the linear term (O(n)).
 8. **Conclusion**:\
-   By choosing an appropriate constant (k), the substitution method confirms that Merge Sort's runtime satisfies:\
+   By choosing an appropriate constant (k), the substitution method confirms that Merge Sort's runtime satisfies:
+
    $$T(n) = O(n \log n)$$
 
 ## Method 2: Iteration (To be updated)
