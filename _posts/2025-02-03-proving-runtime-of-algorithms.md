@@ -38,15 +38,18 @@ In another word, we want to show that the left hand side $f(n)$ is less than or 
 To prove that Merge Sort has a runtime of (O(n \log n)) using the substitution method, we'll follow these steps:
 
 1. **Understand the Recurrence Relation**:\
-   The time complexity of Merge Sort can be described by the recurrence relation:\
+   The time complexity of Merge Sort can be described by the recurrence relation:
 
    $$T(n) = 2T\left(\frac{n}{2}\right) + O(n)$$
 
    This means that to sort an array of size (n), we recursively sort two subarrays each of size (\frac{n}{2}), and then merge them, which takes linear time.
 2. **Assume a Form for the Solution**:\
-   We aim to show that (T(n)) is bounded above by (O(n \log n)). Let's assume:\
+   We aim to show that (T(n)) is bounded above by (O(n \log n)). Let's assume:
+
    $$T(n) \leq k \cdot n \log n$$
+
    where (k) is some constant.
+
 3. **Apply the Substitution Method**:\
    Substitute our assumed upper bound into the recurrence relation to see if it holds.
 4. **Expand the Recurrence Relation**:\
