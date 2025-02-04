@@ -25,6 +25,14 @@ math: false
 
 2/ As the computing shape we use runs on the ARM64 architecture. Check the Docker images you will run if they have an ARM64 release.
 
+# TL;DR
+
+I have a repository setup with Terraform scripts I used along with brief explanation for each component in their corresponding folder's README:
+
+<https://github.com/gamer2810/k3k-k8s/tree/master/terraform-oci-oke>
+
+![high-level-architecture-img](https://raw.githubusercontent.com/gamer2810/k3k-k8s/refs/heads/master/terraform-oci-oke/goal.png "High Level Architecture Preview")
+
 # Steps
 
 # 0/ Get basic knowledge
@@ -39,20 +47,20 @@ Pretty much following this quickstart guide
 
 **Important:** To keep the cluster running on Always Free resource, you have to change these settings:
 
-*  Turn off bastion host and operator host as their setup script does not work well with ARM computing shapes (VM).
+* Turn off bastion host and operator host as their setup script does not work well with ARM computing shapes (VM).
 
 ```bash
 create_bastion_host = false
 create_operator                    = false
 ```
 
-*  Allow public access to K8S API. As we disabled operator host, we will install and use kubectl on our local machine to control the cluster.
+* Allow public access to K8S API. As we disabled operator host, we will install and use kubectl on our local machine to control the cluster.
 
 ```bash
 control_plane_type           = "public"
 ```
 
-*  Config your node pool to use the VM.Standard.A1.Flex shape.
+* Config your node pool to use the VM.Standard.A1.Flex shape.
 
 Oracle provides 4 CPU - 24 GB RAM of this shape for free every month. You can split these however you like but know that each node will have 50GB of boot volume attached and you only have 200GB for free. For that reason I will config mine with 2 nodes, each with 2 CPU and 12 GB of RAM.
 
