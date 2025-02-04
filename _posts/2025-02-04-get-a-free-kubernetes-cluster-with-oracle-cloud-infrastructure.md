@@ -35,11 +35,11 @@ I have a repository setup with Terraform scripts I used along with brief explana
 
 # Steps
 
-## 0/ Get basic knowledge
+## Get basic knowledge
 
 You should at least know about Terraform, Docker, Kubernetes to follow this guide.
 
-## 1/ Get the cluster online
+## Get the cluster online
 
 Pretty much following this quickstart guide
 
@@ -83,7 +83,7 @@ It is **highly encouraged** that you read about what the Terraform script setups
 
 [terraform-oci-oke/instructions.adoc at main · oracle-terraform-modules/terraform-oci-oke](https://github.com/oracle-terraform-modules/terraform-oci-oke/blob/main/docs/instructions.adoc)
 
-# 2/ Connect to your cluster
+## Connect to your cluster
 
 Install kubectl on your local machine
 
@@ -97,15 +97,15 @@ Copy and run the kubeconfig command from the popup, it should look like:
 
 oci ce cluster create-kubeconfig --cluster-id ocid1.cluster.xxx --file $HOME/.kube/config --region yyyy --token-version 2.0.0 --kube-endpoint PUBLIC_ENDPOINT
 
-# 3/ Setup the essentials
+## Setup the essentials
 
-## Calico
+### Calico
 
 The cluster comes with Flannel as its CNI. I find it quite buggy and not being actively maintained. We can switch to Calico with a few commands from this handy guide: 
 
 [Migrate a Kubernetes cluster from flannel/Canal to Calico](https://projectcalico.docs.tigera.io/getting-started/kubernetes/flannel/migration-from-flannel)
 
-## Metric server
+### Metric server
 
 Installing this is required to run the `top` commands.
 
@@ -115,7 +115,7 @@ Just run
 kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/latest/download/components.yaml
 ```
 
-# 4/ Have fun
+## Have fun
 
 Now you have a up-and-running K8S cluster that you can experiment with for free. My recommendations:
 - Setup reverse proxies like Nginx and Apisix for backend api hosting.
