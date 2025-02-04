@@ -35,7 +35,7 @@ I have a repository setup with Terraform scripts I used along with brief explana
 
 # Steps
 
-# 0/ Get basic knowledge
+## 0/ Get basic knowledge
 
 You should at least know about Terraform, Docker, Kubernetes to follow this guide.
 
@@ -117,4 +117,14 @@ kubectl apply -f https://github.com/kubernetes-sigs/metrics-server/releases/late
 
 # 4/ Have fun
 
-Now you have a up-and-running K8S cluster that you can experiment with for free.
+Now you have a up-and-running K8S cluster that you can experiment with for free. My recommendations:
+- Setup reverse proxies like Nginx and Apisix for backend api hosting.
+- Deploy a React website.
+- Purchase a domain name / secure the website using SSL.
+- Try playing around with Cloudflare.
+
+**_PRECAUTION_**\
+Please note that exposing your servers to the WWW is **extremely dangerous** if you don't know what you are doing.\
+If you are not sure about something, I highly recommend checking out guides or talk to someone who has experience first.\
+There are thousands of bots probing IPs every second and if you accidentally left any port open then that is recipe for disaster :D.\
+(In 2020, I lost my capstone's project database by leaving the MongoDB port open, even with a 15-characters password :D)
