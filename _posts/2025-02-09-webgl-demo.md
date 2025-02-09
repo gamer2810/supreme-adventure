@@ -31,3 +31,6 @@ It includes:
 - The rendering program setup and shader binding using WebGL.
 - Vertex Shader written in GLSL.
 - Fragment Shader written in GLSL.
+
+# References
+[WebGL2 Fundamentals](https://webgl2fundamentals.org/webgl/lessons/webgl-fundamentals.html)
