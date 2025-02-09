@@ -23,6 +23,7 @@ math: false
 <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </div>
 # Description
+
 The above project demonstrates how to set up a basic OpenGL application, in this case using WebGL.
 
 It includes:
