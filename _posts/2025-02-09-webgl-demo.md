@@ -14,7 +14,7 @@ math: false
 ---
 
 # Demo
-<div style="left: 0; width: 100%; position:relative; aspect-ratio: 1/1;">
+<div style="left: 0; width: 100%; position:relative; aspect-ratio: 3/1;">
 <p class="codepen" data-height="300" data-default-tab="result" data-slug-hash="LEYPGeK" data-pen-title="Untitled" data-user="gamer2810" style="height: 300px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;">
   <span>See the Pen <a href="https://codepen.io/gamer2810/pen/LEYPGeK">
   Untitled</a> by K3K (<a href="https://codepen.io/gamer2810">@gamer2810</a>)
@@ -22,7 +22,6 @@ math: false
 </p>
 <script async src="https://public.codepenassets.com/embed/index.js"></script>
 </div>
-
 # Description
 The above project demonstrates how to set up a basic OpenGL application, in this case using WebGL.
 
