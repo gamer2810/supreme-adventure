@@ -33,7 +33,7 @@ math: false
 
 **Procedure:**: Using the **Byte Pair Encoding** algorithm, recognize repeating patterns and encodes them as a single token.
 
-E.g.:
+*E.g.:* 
 
 ![tokenizer-example](/assets/img/uploads/tokenizer-example.png "Tokenizer Example")
 
@@ -47,7 +47,7 @@ E.g.:
 
 **Procedure:** Using machine learning, train the neural networks so that it can statistically predict what token comes next after a sequence (window) of tokens.
 
-E.g.: 
+*E.g.:* 
 
 Input text = "I view news" => Token window = "333 255"
 Prediction = "992" = "Article" - 3%
@@ -58,7 +58,7 @@ Prediction = "992" = "Article" - 3%
 
 **Procedure:** Infer a starting token then merge that token with the input to generate the next token so that it builds subsequent tokens based on generated ones.
 
-E.g.:
+*E.g.:* 
 
 ![interence-example](/assets/img/uploads/inference-example.png "Inference example")
 
@@ -66,16 +66,29 @@ E.g.:
 
 **Goal:** Turn the **BASE** model into a more helpful assistant.
 
-**Procedure:** 
-Multiple methods:
+### Key takeaway
+
+The way LLM works is by **PREDICTING** the most likely token to appear in the answer.
+
+When a user chats with a LLM, the model runs a simulation based on its trained data and user's input.
+
+As you will see below, the model is enhanced by human experts' labelling. 
+
+Therefore, it finds what human experts will most likely say when presented with user's input.
+
+Hence, the model is not **CRAFTING** its own answer.
+
+**Multiple methods:** 
 
 * Embed some starting tokens when model starts up so that it is more likely to produce related information.
 
-E.g.: Information about the model itself so that when asked it has an idea.
+*E.g.:* 
+
+Feed the model information about itself so that when being asked it has an idea.
 
 * Using conversations to further tune the model's answer (i.e. let the model takes on the personality). The conversation can either be syntactic (machine-generated) or crafted by human experts.
 
-E.g.: 
+*E.g.:* 
 
 ![conversation-example](/assets/img/uploads/conversation-example.png "Conversation Example")
 
