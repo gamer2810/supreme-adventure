@@ -19,9 +19,7 @@ math: false
 <iframe width="560" height="315" src="https://www.youtube.com/embed/7xTGNNLPyMI?si=UYt9JPHJjFvr5WHp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </div>
 
-# Basic concepts
-
-## Gathering data
+# Gathering data
 
 **Goal:** Gather clean, useful text data from arbitrary sources (website, books,...).
 
@@ -30,7 +28,7 @@ math: false
 **Reference**
 [HuggingFace's FineWeb](https://huggingface.co/spaces/HuggingFaceFW/blogpost-fineweb-v1) 
 
-## Tokenization
+# Tokenization
 
 **Goal:** Reduce the size of the text gathered while preserving the *meaning* behind it.
 
@@ -44,23 +42,25 @@ E.g.:
 [BPE Algorithm](https://en.wikipedia.org/wiki/Byte_pair_encoding)
 [Tiktokenizer](https://tiktokenizer.vercel.app/)
 
-## Training the language model
+# Training the language model
 
 **Goal:** Extract the knowledge behind the text by training the neural network on the tokenized text and tune the parameters. The model trained here will be called the **BASE** model.
 
 **Procedure:** Using machine learning, train the neural networks so that it can statistically predict what token comes next after a sequence (window) of tokens.
 
 E.g.: 
+
 Input text = "I view news" => Token window = "333 255"
 Prediction = "992" = "Article" - 3%
 
-## Inference
+# Inference
 
 **Goal:** Generating a sequence of tokens from the trained model (generating an answer).
 
 **Procedure:** Infer a starting token then merge that token with the input to generate the next token so that it builds subsequent tokens based on generated ones.
 
 E.g.:
+
 ![interence-example](/assets/img/uploads/inference-example.png "Inference example")
 
 ## Post-training tuning
@@ -84,12 +84,10 @@ E.g.:
 
 * Use special tokens to allow models to use external tools like searching...
 
-## Video's Note
+# Video's Note
 
 All credits go to the youtube video's owner at [Youtube Link](https://www.youtube.com/watch?v=7xTGNNLPyMI)
 
 [Drive Link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhWTXhkTm50dWpLNnhnRDBnQllMaXVMZlg2Z3xBQ3Jtc0ttVndnT1V1UnRRWW1yZjB0UXFNR09WMDc0WXZKWVJFOU5TWDdVSlp0YnBrTHFJU0lRMzN2eEVncTRxbVpoYVBkTlpOTTVxUC1kWThDTEFyRDJiUTZ1djFVZmZ3OVdOZjJoSGdNLXoybk15S05GRlJLQQ&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1EZh5hNDzxMMy05uLhVryk061QYQGTxiN%2Fview%3Fusp%3Dsharing&v=7xTGNNLPyMI)
-
-[](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhWTXhkTm50dWpLNnhnRDBnQllMaXVMZlg2Z3xBQ3Jtc0ttVndnT1V1UnRRWW1yZjB0UXFNR09WMDc0WXZKWVJFOU5TWDdVSlp0YnBrTHFJU0lRMzN2eEVncTRxbVpoYVBkTlpOTTVxUC1kWThDTEFyRDJiUTZ1djFVZmZ3OVdOZjJoSGdNLXoybk15S05GRlJLQQ&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1EZh5hNDzxMMy05uLhVryk061QYQGTxiN%2Fview%3Fusp%3Dsharing&v=7xTGNNLPyMI)
 
 ![llm-notes](/assets/img/uploads/llm-excalidraw.svg "LLM Notes")
