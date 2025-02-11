@@ -83,3 +83,13 @@ E.g.:
 [Video's timestamp on this matter](https://youtu.be/7xTGNNLPyMI?si=NwPn4o6tQcL9Ho28&t=3751)
 
 * Use special tokens to allow models to use external tools like searching...
+
+## Video's Note
+
+All credits go to the youtube video's owner at [Youtube Link](https://www.youtube.com/watch?v=7xTGNNLPyMI)
+
+[Drive Link](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhWTXhkTm50dWpLNnhnRDBnQllMaXVMZlg2Z3xBQ3Jtc0ttVndnT1V1UnRRWW1yZjB0UXFNR09WMDc0WXZKWVJFOU5TWDdVSlp0YnBrTHFJU0lRMzN2eEVncTRxbVpoYVBkTlpOTTVxUC1kWThDTEFyRDJiUTZ1djFVZmZ3OVdOZjJoSGdNLXoybk15S05GRlJLQQ&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1EZh5hNDzxMMy05uLhVryk061QYQGTxiN%2Fview%3Fusp%3Dsharing&v=7xTGNNLPyMI)
+
+[](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbFhWTXhkTm50dWpLNnhnRDBnQllMaXVMZlg2Z3xBQ3Jtc0ttVndnT1V1UnRRWW1yZjB0UXFNR09WMDc0WXZKWVJFOU5TWDdVSlp0YnBrTHFJU0lRMzN2eEVncTRxbVpoYVBkTlpOTTVxUC1kWThDTEFyRDJiUTZ1djFVZmZ3OVdOZjJoSGdNLXoybk15S05GRlJLQQ&q=https%3A%2F%2Fdrive.google.com%2Ffile%2Fd%2F1EZh5hNDzxMMy05uLhVryk061QYQGTxiN%2Fview%3Fusp%3Dsharing&v=7xTGNNLPyMI)
+
+![llm-notes](/assets/img/uploads/llm-excalidraw.svg "LLM Notes")
