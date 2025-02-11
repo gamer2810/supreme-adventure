@@ -7,7 +7,6 @@ tags:
   - llm
   - study
   - notes
-  - ""
 description: Document what I learnt from a deep dive video on LLM
 toc: true
 comments: true
