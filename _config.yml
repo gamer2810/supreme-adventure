@@ -110,7 +110,7 @@ comments:
   provider: disqus
   # The provider options are as follows:
   disqus:
-    shortname: supreme-adventure
+    shortname: k3kdev
   # utterances settings › https://utteranc.es/
   utterances:
     repo: # <gh-username>/<repo>
