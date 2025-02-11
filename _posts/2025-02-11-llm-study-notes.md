@@ -74,7 +74,7 @@ When a user chats with a LLM, the model runs a simulation based on its trained d
 
 As you will see below, the model is enhanced by human experts' labelling. 
 
-Therefore, it finds what human experts will most likely say when presented with user's input.
+It finds what human experts will most likely say when presented with user's input.
 
 Hence, the model is not **CRAFTING** its own answer.
 
