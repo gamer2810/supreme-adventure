@@ -47,4 +47,5 @@ collections:
           default: true,
         }
       - { label: "Math Support", name: "math", widget: "boolean", default: false }
+      - { label: "Featured Image", name: "image", widget: "image", required: false, default: false }
       - { label: "Body", name: "body", widget: "markdown" }
