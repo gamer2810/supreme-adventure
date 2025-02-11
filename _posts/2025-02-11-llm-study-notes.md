@@ -11,6 +11,7 @@ description: Document what I learnt from a deep dive video on LLM
 toc: true
 comments: true
 math: false
+image: /assets/img/uploads/llm-preview.webp
 ---
 # Video
 
