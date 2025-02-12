@@ -190,8 +190,9 @@ Now, why do we need to forget everything about the previous iteration of IDS and
 In order to continue running from the previous iteration at depth *a*, we must keep track of all nodes until depth *a*. It then reverts back to your normal BFS algorithm which is memory-intensive as discussed above.
 
 ## Comparison Table
+
 | Algorithm  | Completeness | Optimality | Time Complexity | Space Complexity | Notes |
-|------------|-------------|------------|----------------|----------------|-------|
+|:------------|-------------|------------|----------------|----------------|-------:|
 | **BFS** | ✅ Yes | ✅ Yes | **O(b^d)** | **O(b^d)** | Explores level by level, finds shortest path. Memory usage grows exponentially |
 | **DFS** | ❌ No | ❌ No | **O(b^d)** | **O(bd)** | Uses less memory but can get stuck in deep paths. |
 | **DLS** | ❌ No | ❌ No | **O(b^l)** | **O(bl)** | Limits depth but risks missing solutions. |
