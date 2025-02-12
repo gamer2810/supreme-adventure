@@ -159,7 +159,7 @@ Run IDS again and again with increasing limit *l*.
 
 ## Implementation
 
-### Primary data structure:
+### Primary data structure
 Stack - same with IDS and DFS.
 
 ### Pseudo-code
