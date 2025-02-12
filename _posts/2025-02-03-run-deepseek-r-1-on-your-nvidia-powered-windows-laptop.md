@@ -2,7 +2,7 @@
 title: Run Deepseek R-1 on your NVIDIA-powered Windows laptop
 date: February 2, 2025 7:10 PM
 categories:
-  - AI
+  - ai
 tags:
   - deepseek
   - tutorial
