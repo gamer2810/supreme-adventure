@@ -16,6 +16,7 @@ toc: true
 comments: true
 math: false
 image: /assets/img/uploads/steam-miniprofile.png
+mermaid: true
 ---
 ## Introduction
 
