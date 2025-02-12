@@ -22,8 +22,6 @@ image: /assets/img/uploads/search-problem-romania.jpg
 **Example:** 
 Given a map of connecting cities in Romania, find a path between two cities.
 
-![romania-search-problem](/assets/img/uploads/search-problem-romania.jpg "Romania Route Search Problem")
-
 ## Concept / Notation
 
 The above problem can be understood as a undirected weighted graph with each city being a *node*.
@@ -38,26 +36,26 @@ As we start with a specific state, we can model the problem as a tree, with the 
 7. **Maximum depth(m):** the largest depth of the state space, with initial state being depth *0*.
 8. **Solution Depth(d):** the depth of the least-cost solution.
 
-# Characteristics of a search algorithm
+## Characteristics of a search algorithm
 
 * **Time complexity:** What is the worst possible time to find an answer? (Or how many evaluation must be made before reaching a goal?)
 * **Space complexity:** How many nodes need to be generated before finding an answer?
 * **Completeness:** Can the algorithm find an answer if there is one?
 * **Optimality:** Is the answer found the best one?
 
-# Uninformed Search Algorithms
+## Uninformed Search Algorithms
 
 In these problems, except from the state space, we do not possess any additional insight.
 
 When two nodes have the same priority, we can choose any one of them.
 
-# Breadth-first Search
+## Breadth-first Search
 
-## Idea
+### Idea
 
 From one state, explore all immediate neighbor nodes before moving to a deeper level.
 
-## Implementation
+### Implementation
 
 ### Primary data structure
 Queue - we will need the First-in-first-out characteristic for step *4.1* below.
@@ -72,25 +70,25 @@ Queue - we will need the First-in-first-out characteristic for step *4.1* below.
    1. Expand (generate nodes) for its children. Put all children nodes in the *back* of the queue.
    2. Back to step 1.
 
-## Characteristic
+### Characteristic
 
 * **Time complexity:** $$O(b \cdot d+1)$$ - must evaluate all states in levels above the goal's.
 * **Space complexity:** $$O(b \cdot d+1)$$ - must preserve all nodes visited to build the path from the initial state to the goal state.
 * **Completeness:** Yes, if the state space is *finite*.
 * **Optimality:** Yes, if the cost between states are equal.
 
-## Caveat
+### Caveat
 
 Pay attention to the space complexity above: It is growing exponentially with rate *d*.
 Suppose a node will take up 1 byte of memory, at depth 15 we will have 2^16 nodes, which means 65KB of memory taken.
 
-# Depth-first Search
+## Depth-first Search
 
-## Idea
+### Idea
 
 From one state, recursively explore one child's subtree until the deepest depth before moving to the next child.
 
-## Implementation
+### Implementation
 
 ### Primary data structure 
 Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
@@ -105,24 +103,24 @@ Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
    1. Expand (generate nodes) for its children. Put all children nodes in the *front* of the stack.
    2. Back to step 1.
 
-## Characteristic
+### Characteristic
 
 * **Time complexity:** $$O(b \cdot m)$$ - must evaluate all states.
 * **Space complexity:** $$O(b*m)$$ - only need to preserve the subtree being explored.
 * **Completeness:** Yes, if the state space is *finite* and there is *no loop*.
 * **Optimality:** No, there is no guarantee to find a least-cost goal.
 
-## Caveat
+### Caveat
 
 Can waste time if the solution is not in the subtree being explored.
 
-# Depth-limited Search
+## Depth-limited Search
 
-## Idea
+### Idea
 
 Basically DFS, but only run until a limit depth *l*.
 
-## Implementation
+### Implementation
 
 ### Primary data structure
 Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
@@ -138,26 +136,26 @@ Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
    2. Expand (generate nodes) for its children. Put all children nodes in the *front* of the stack.
    3. Back to step 1.
 
-## Characteristic
+### Characteristic
 
 * **Time complexity:** $$O(b \cdot l)$$ - must evaluate all states until limit *l*.
 * **Space complexity:** $$O(b*l)$$ - only need to preserve the subtree being explored.
 * **Completeness:** No.
 * **Optimality:** No, there is no guarantee to find a least-cost goal.
 
-## Caveat
+### Caveat
 
 If limit *l* is lower than least-cost solution's depth *d* then it will not find any goal state.
 
 On the other hand, if you know the solution exists in at most depth *d* then run DLS at limit *d* is a good choice.
 
-# Iterative Deepening Search
+## Iterative Deepening Search
 
-## Idea
+### Idea
 
 Run IDS again and again with increasing limit *l*.
 
-## Implementation
+### Implementation
 
 ### Primary data structure
 Stack - same with IDS and DFS.
@@ -170,14 +168,14 @@ Stack - same with IDS and DFS.
     2. Increase d by 1.
     3. Back to step 2.
 
-## Characteristic
+### Characteristic
 
 * **Time complexity:** $$O(b \cdot d)$$ - must evaluate all states.
 * **Space complexity:** $$O(b*d)$$ - only need to preserve the subtree being explored.
 * **Completeness:** Yes.
 * **Optimality:** Yes, it will find a least-cost goal.
 
-## Caveat
+### Caveat
 
 There are some time overhead in levels before *d* because we are running IDS again and again on them.
 
