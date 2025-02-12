@@ -59,10 +59,10 @@ From one state, explore all immediate neighbor nodes before moving to a deeper l
 
 ## Implementation
 
-### Primary data structure: 
+### Primary data structure
 Queue - we will need the First-in-first-out characteristic for step *4.1* below.
 
-### Pseudo-code:
+### Pseudo-code
 
 1. Get the first node from the queue
 2. Check if the node is a goal node
@@ -85,16 +85,17 @@ Pay attention to the space complexity above: It is growing exponentially with ra
 Suppose a node will take up 1 byte of memory, at depth 15 we will have 2^16 nodes, which means 65KB of memory taken.
 
 # Depth-first Search
+
 ## Idea
 
 From one state, recursively explore one child's subtree until the deepest depth before moving to the next child.
 
 ## Implementation
 
-### Primary data structure: 
+### Primary data structure 
 Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
 
-### Pseudo-code:
+### Pseudo-code
 
 1. Get the first node from the stack
 2. Check if the node is a goal node
@@ -116,16 +117,17 @@ Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
 Can waste time if the solution is not in the subtree being explored.
 
 # Depth-limited Search
+
 ## Idea
 
 Basically DFS, but only run until a limit depth *l*.
 
 ## Implementation
 
-### Primary data structure: 
+### Primary data structure
 Stack - we will need the Last-in-first-out characteristic for step *4.1* below.
 
-### Pseudo-code:
+### Pseudo-code
 
 1. Get the first node from the stack
 2. Check if the node is a goal node
@@ -150,16 +152,17 @@ If limit *l* is lower than least-cost solution's depth *d* then it will not find
 On the other hand, if you know the solution exists in at most depth *d* then run DLS at limit *d* is a good choice.
 
 # Iterative Deepening Search
+
 ## Idea
 
 Run IDS again and again with increasing limit *l*.
 
 ## Implementation
 
-### Primary data structure: 
+### Primary data structure:
 Stack - same with IDS and DFS.
 
-### Pseudo-code:
+### Pseudo-code
 
 1. Define a cut-off depth c.
 2. While current depth d < c:
