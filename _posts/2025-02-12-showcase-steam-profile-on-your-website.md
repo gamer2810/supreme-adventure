@@ -33,21 +33,22 @@ This widget is perfect for gaming communities, streamers, or anyone who wants to
 
 ## How It Works
 
+
 ```mermaid
 sequenceDiagram
-    User->>+gamer2810.github.io: Get Steam Miniprofile
-    loop Every 5 minutes
-        Note right of Pipedream: Glitch shutdowns the CORS Server<br>every 5 minutes, so we schedule a request<br> every 5 mins to wake it up, ensuring response time
-        Pipedream->>CORS Server: Wake up
-    end
-    gamer2810.github.io->>-User: Return loading miniprofile
-    Note right of User: Wait for real profile to load
-    gamer2810.github.io->>+CORS Server: Get real profile HTML
-    Note right of CORS Server: https://glitch.com/~steam-miniprofile-cors
-    CORS Server->>+Steam: Get real profile HTML
-    Steam->>-CORS Server: Requested HTML
-    CORS Server->>-gamer2810.github.io:Profile HTML with CORS headers
-    gamer2810.github.io-->User: Replace loading miniprofile with real HTML
+User->>+gamer2810.github.io: Get Steam Miniprofile
+loop Every 5 minutes
+    Note right of Pipedream: Glitch shutdowns the CORS Server<br>every 5 minutes, so we schedule a request<br> every 5 mins to wake it up, ensuring response time
+    Pipedream->>CORS Server: Wake up
+end
+gamer2810.github.io->>-User: Return loading miniprofile
+Note right of User: Wait for real profile to load
+gamer2810.github.io->>+CORS Server: Get real profile HTML
+Note right of CORS Server: https://glitch.com/~steam-miniprofile-cors
+CORS Server->>+Steam: Get real profile HTML
+Steam->>-CORS Server: Requested HTML
+CORS Server->>-gamer2810.github.io:Profile HTML with CORS headers
+gamer2810.github.io-->User: Replace loading miniprofile with real HTML
 ```
 
 ## Get Started
