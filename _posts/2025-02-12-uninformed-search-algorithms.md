@@ -193,7 +193,7 @@ In order to continue running from the previous iteration at depth *a*, we must k
 
 | Algorithm  | Completeness | Optimality | Time<br>Complexity | Space<br>Complexity | Notes |
 |:------------|-------------|------------|----------------|----------------|:--------|
-| **BFS** | ✅ | ✅ | **O(b^d)** | **O(b^d)** | Explores level by level,<br>finds shortest path. Memory usage<br> grows exponentially |
+| **BFS** | ✅ | ✅ | **O(b^d)** | **O(b^d)** | Explores level by level,<br>finds shortest path. Memory<br>usage grows exponentially |
 | **DFS** | ❌ | ❌ | **O(b^d)** | **O(bd)** | Uses less memory but can <br>get stuck in deep paths. |
 | **DLS** | ❌ | ❌ | **O(b^l)** | **O(bl)** | Limits depth but risks <br>missing solutions. |
-| **IDS** | ✅ | ✅ | **O(b^d)** | **O(bd)** | Combines DFS space efficiency<br>with BFS completeness.<br>Has time overhead compared to DLS. |
+| **IDS** | ✅ | ✅ | **O(b^d)** | **O(bd)** | Combines DFS space efficiency<br>with BFS completeness.<br>Has time overhead<br>compared to DLS. |
