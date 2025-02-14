@@ -6,8 +6,6 @@ gem "jekyll-theme-chirpy", "7.1.1"
 
 gem "html-proofer", "~> 5.0", group: :test
 
-gem "jekyll-google-photos", :git => "https://github.com/gamer2810/jekyll-google-photos.git"
-
 platforms :mingw, :x64_mingw, :mswin, :jruby do
   gem "tzinfo", ">= 1", "< 3"
   gem "tzinfo-data"
