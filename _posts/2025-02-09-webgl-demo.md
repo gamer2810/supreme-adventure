@@ -70,17 +70,14 @@ function updateVisualization() {
   const points = { type: "FeatureCollection", features };
   const v = d3.geoVoronoi()(points);
 
-  // Compute colors based on triangle centroids
   const triangles = v.triangles().features;
 
-  // Define a custom Siri-inspired gradient scale
   const colorScale = d3.scaleSequential(d3.interpolateRgbBasis([
-    "#5E5CE6", // Deep purple-blue
-    "#BF5AF2", // Vibrant pink-purple
-    "#FF2D55"  // Apple’s signature red-pink
-  ])).domain([-90, 90]); // Latitude range
+    "#5E5CE6", 
+    "#BF5AF2", 
+    "#FF2D55"  
+  ])).domain([-90, 90]); 
 
-  // Update triangles with gradient color
   svg.select(".triangles")
     .selectAll("path")
     .data(triangles)
@@ -88,10 +85,9 @@ function updateVisualization() {
     .attr("d", path)
     .attr("fill", d => {
       const centroid = d3.geoCentroid(d);
-      return colorScale(centroid[1]); // Use latitude for color
+      return colorScale(centroid[1]);
     });
 
-  // Update sites
   svg.select(".sites")
     .selectAll("path")
     .data(points.features)
@@ -99,7 +95,6 @@ function updateVisualization() {
     .attr("d", path);
 }
 
-// Initialize SVG content
 svg.append("path")
   .attr("id", "sphere")
   .datum({ type: "Sphere" })
@@ -108,7 +103,6 @@ svg.append("path")
 svg.append("g").attr("class", "triangles");
 svg.append("g").attr("class", "sites");
 
-// Update when slider changes
 sliderValue.innerHTML = slider.value;
 slider.addEventListener("input", function () {
   pointCount = Number(slider.value);
@@ -116,10 +110,8 @@ slider.addEventListener("input", function () {
   updateVisualization();
 });
 
-// Start visualization
 updateVisualization();
 
-// Animation loop
 d3.interval((elapsed) => {
   projection.rotate([elapsed / 150, 0]);
   svg.selectAll("path").attr("d", path);
