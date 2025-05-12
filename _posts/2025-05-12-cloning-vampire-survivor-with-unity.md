@@ -13,4 +13,4 @@ image: /assets/img/uploads/unity.png
 ---
 # Showcase
 
-<iframe frameborder="0" src="https://itch.io/embed-upload/13667453?color=333333" allowfullscreen="" width="980" height="640"><a href="https://k3kdev.itch.io/zombiesurvivor">Play ZombieSurvivor on itch.io</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed-upload/13667453?color=333333" allowfullscreen="" width="100%" height="640"><a href="https://k3kdev.itch.io/zombiesurvivor">Play ZombieSurvivor on itch.io</a></iframe>
