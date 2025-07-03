@@ -1,6 +1,5 @@
 ---
-title: Making and hosting a Progressive Web App with React, GitHub Pages, and
-  Google APIs and AI Studio
+title: Making a Progressive Web App with Google AI Studio
 date: July 3, 2025 10:57 PM
 categories:
   - webdev
