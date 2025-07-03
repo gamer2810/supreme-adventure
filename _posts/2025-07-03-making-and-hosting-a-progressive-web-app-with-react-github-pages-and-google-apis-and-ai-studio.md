@@ -21,9 +21,11 @@ comments: true
 math: false
 image: false
 ---
+
 Hey everyone!
 
-I recently spent some time diving deep into [Google's AI Studio](https://aistudio.google.com/). While it certainly has its quirks with some technical choices and occasionally outdated or conflicting API code, I managed to develop a PWA with it. Along the way, I made a point of tackling new technologies to see how the AI model approached them, which was a fascinating learning experience in itself. These are the topics I found particularly helpful on my coding journey:
+I recently spent some time diving deep into [Google's AI Studio](https://aistudio.google.com/). While it certainly has its quirks with some technical choices and occasionally outdated or conflicting API code, I managed to develop a PWA with it. 
+Along the way, I made a point of tackling new technologies to see how the AI model approached them, which was a fascinating learning experience in itself. These are the topics I found particularly helpful on my coding journey:
 
 * PWA and How They Work: How to create a PWA with service worker. How to adapt it to enable installation on mobile device.
 * Google Login: Implement secure Google login on React with gapi-script.
@@ -49,8 +51,6 @@ I built this PWA to be useful for managing your everyday shopping. Here are some
 
 * PWA for Mobile Installation & Persistence: Install the application directly to your mobile device's home screen for quick access, enjoying a native-app like experience with local data persistence.
 
----
-
-Check out the PWA here: <https://shopping.k3k.dev/>
+## Check out the PWA here: <https://shopping.k3k.dev/>
 
 Happy shopping (and coding)!
