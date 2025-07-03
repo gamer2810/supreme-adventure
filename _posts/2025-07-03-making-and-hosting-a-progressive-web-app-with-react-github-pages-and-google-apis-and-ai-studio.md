@@ -50,7 +50,7 @@ I built this PWA to be useful for managing your everyday shopping. Here are some
 
 * PWA for Mobile Installation & Persistence: Install the application directly to your mobile device's home screen for quick access, enjoying a native-app like experience with local data persistence.
 
-- - -
+---
 
 Check out the PWA here: <https://shopping.k3k.dev/>
 
