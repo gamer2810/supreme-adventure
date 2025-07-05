@@ -21,8 +21,11 @@ comments: true
 math: false
 image: false
 ---
-
 Hey everyone!
+
+# Interactive demo
+
+<!--ARCADE EMBED START--><div style="position: relative; padding-bottom: calc(62.5% + 41px); height: 0; width: 100%;"><iframe src="https://demo.arcade.software/QlmKPQnVqRaEcuFcr8zM?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Track and Review Your Grocery Shopping Trips" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
 
 I recently spent some time diving deep into [Google's AI Studio](https://aistudio.google.com/). While it certainly has its quirks with some technical choices and occasionally outdated or conflicting API code, I managed to develop a PWA with it. 
 Along the way, I made a point of tackling new technologies to see how the AI model approached them, which was a fascinating learning experience in itself. These are the topics I found particularly helpful on my coding journey:
@@ -40,15 +43,10 @@ Along the way, I made a point of tackling new technologies to see how the AI mod
 I built this PWA to be useful for managing your everyday shopping. Here are some of its core features:
 
 * Manage Your Shopping List: Easily add, edit, and remove items to keep your shopping list organized and up-to-date.
-
 * Record Shopping Trips: Log your purchases by selecting items from your list, adding any unplanned items, noting the total amount spent, and optionally attaching a receipt image for reference.
-
 * Detailed Spending Reports: Access daily, weekly, and monthly reports that summarize your total expenditure and provide a clear breakdown of planned versus unplanned items, helping you track and manage your budget.
-
 * Local Data Storage with IndexedDB: Benefit from fast loading times and offline access, as your data is securely stored directly on your device.
-
 * Secure Google Login & Drive Backup: Sign in conveniently with your Google account, and rest assured that your shopping data is backed up to your Google Drive as a .csv file, giving you full control.
-
 * PWA for Mobile Installation & Persistence: Install the application directly to your mobile device's home screen for quick access, enjoying a native-app like experience with local data persistence.
 
 ## Check out the PWA here: <https://shopping.k3k.dev/>
