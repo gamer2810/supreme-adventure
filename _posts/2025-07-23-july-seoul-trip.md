@@ -15,7 +15,7 @@ comments: true
 math: false
 image: false
 ---
-## **Part 1: Pre-Trip Planning**
+## **Pre-Trip Planning**
 
 Getting the essentials sorted before you go can make your trip much smoother. Here’s what I focused on.
 
@@ -67,7 +67,7 @@ Seoul’s public transport is world-class.
 
 - - -
 
-## **Part 2: My Itinerary**
+## **My Itinerary**
 
 | Day | Date                 | Time       | Activity                                         |
 |:---:|:---------------------|:-----------|:-------------------------------------------------|
@@ -92,7 +92,7 @@ Seoul’s public transport is world-class.
 
 - - -
 
-## **Part 3: Trip Experiences & Highlights**
+## **Trip Experiences & Highlights**
 
 Here are some of the standout moments and must-do activities from my time in Seoul.
 
@@ -127,7 +127,7 @@ You can book directly here: [Official NANTA Website](https://www.nanta.co.kr:452
 
 - - -
 
-## **Part 4: Dining Diary: My Favorite Eats**
+## **Dining Diary: My Favorite Eats**
 
 The food in Seoul was a huge highlight. Here are the places that I'm still dreaming about.
 
@@ -159,7 +159,7 @@ For more food inspiration, explore the "Trending Places" or popular search featu
 
 - - -
 
-## **Part 5: Final Thoughts & Cultural Observations**
+## **Final Thoughts & Cultural Observations**
 
 A few final tips and observations to help you on your way.
 
@@ -167,3 +167,4 @@ A few final tips and observations to help you on your way.
 * **Punctuality is Key:** Everything in Seoul runs on time. If you've booked a guided tour, a show, or a performance, plan ahead and account for your transportation time.
 * **Communicating with Locals:** In my experience, Korean people will try their best to communicate with you, even with a language barrier. Please be patient, respectful, and have a translator app ready. A little effort goes a long way!
 * **The Hidden Cutlery Drawer:** If you sit down at a local restaurant and don't see forks or spoons, check for a small drawer built into the side of your table. This is where the tableware is often stored!
+* **Clean up before you leave:** Some cafes and restaurants expect you to clean up after yourself. If you see a *Return* sign, please place your empty glasses / tray there after you have finished.
