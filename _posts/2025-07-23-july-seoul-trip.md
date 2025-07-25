@@ -56,7 +56,7 @@ You can buy ticket from the **bus ticket kiosks** at the airport exits. You can 
 
 Alternatively, you can pay with cash/ tmoney card when you get on the bus.
 
-The bus is very comfortable with dedicated luggage storage below the bus and stowage for your carry-on on the bus. The bus is not crowded and the seat is very comfortable with recliner chair and lots of leg space.
+The bus is very comfortable with dedicated luggage storage below the bus and stowage for your carry-on on the bus. The bus is not crowded. Reclining seats are very comfortable and have lots of leg space.
 
 ### **Getting Around the City**
 
@@ -148,6 +148,11 @@ The food in Seoul was a huge highlight. Here are the places that I'm still dream
 
   * **Samgyetang (Ginseng Chicken Soup):** For 17,000 KRW, you get a whole (though small) chicken simmered with rice, green mung beans, and traditional herbs until it’s incredibly tender. It comes with unlimited self-serve banchan and, after 2 PM, unlimited *makgeolli* (rice wine)!
 
+### **Gyoza at Jonny Dumpling **
+
+* **Kakao Map:** <https://kko.kakao.com/-Sf5FtAD8E>
+* **My Experience:** Tasty dumplings served fresh. Staff speaks Chinese and they do not have an English menu so get your translator application ready.
+
 ### **Casual Wine & Dine at Nue Haus**
 
 * **My Experience:** A nice, casual dining spot with a good wine selection, making it perfect for a small celebration. The food was decent but didn't stand out as much as other meals. The tiramisu, however, is definitely worth a try.
@@ -163,6 +168,7 @@ For more food inspiration, explore the "Trending Places" or popular search featu
 
 A few final tips and observations to help you on your way.
 
+* **PLAN YOUR BREAKFAST/LUNCH TIME:** Almost 90% of Seoul cafes and restaurants open before 10AM. If you need a breakfast, check if your hotel offer one or you can grab sandwiches / instant ramen from the CUs. Additionally, a lot of store will close around 2-3PM and reopen at 4-5PM, so pay attention to their opening time on Kakao/Naver Map.
 * **Cafe Etiquette:** Unlike Western chains like Starbucks, most local cafes do not encourage laptop usage for work. If you need to work for more than a couple of hours, look for cafes that have designated "work seats" or cubicles with power outlets.
 * **Punctuality is Key:** Everything in Seoul runs on time. If you've booked a guided tour, a show, or a performance, plan ahead and account for your transportation time.
 * **Communicating with Locals:** In my experience, Korean people will try their best to communicate with you, even with a language barrier. Please be patient, respectful, and have a translator app ready. A little effort goes a long way!
