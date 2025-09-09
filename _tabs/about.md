@@ -44,15 +44,16 @@ order: 4
 
 ## Resume
 
-<a href="../assets/resume/mktran-resume2025.pdf" download="mktran_resume.pdf">Download as PDF</a>
+<a href="../assets/resume/mktran-resume-summer2026.pdf" download="mktran_resume.pdf">Download as PDF</a>
 
 <div>
-<img 
-  style="
-  width: 800px;
-  height: 1000px;
-  "
-  src="../assets/resume/mktran-resume.avif"
+<embed 
+  frameBorder="0"
+  scrolling="auto"
+  height="1000px"
+  width="800px"
+  type="application/pdf"
+  src="../assets/resume/mktran-resume-summer2026.pdf"
   alt="Resume PDF preview"
 >
-</div>
+</embed>
