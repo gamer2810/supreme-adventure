@@ -60,5 +60,4 @@ order: 4
   type="application/pdf"
   src="../assets/resume/mktran-resume-summer2026.pdf"
   alt="Resume PDF preview"
->
-</embed>
+/>
