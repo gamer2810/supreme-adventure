@@ -14,7 +14,7 @@ description: This is a cheatsheet for quick reference and knowledge refresh
 toc: true
 comments: true
 math: true
-image: false
+image: /assets/img/uploads/gg.png
 ---
 # Descriptive Statistics
 
