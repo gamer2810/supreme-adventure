@@ -13,7 +13,7 @@ description: This is a cheatsheet for quick reference and knowledge refresh
   after Google's The Power of Statistics course.
 toc: true
 comments: true
-math: false
+math: true
 image: false
 ---
 # Descriptive Statistics
