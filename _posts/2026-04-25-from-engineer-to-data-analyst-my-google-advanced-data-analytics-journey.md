@@ -29,7 +29,7 @@ This transformed model selection from trial-and-error into a systematic decision
 Here's how all the concepts I learned connect together:
 
 ```mermaid
-graph TB
+graph
     subgraph " "
     DA["<b>Data Analytics Framework</b>"]
     end
@@ -66,7 +66,7 @@ graph TB
 One of the most practical tools I developed was this decision framework:
 
 ```mermaid
-graph TD
+graph
     START{{"What type of<br/>problem?"}}
     
     START -->|Predict a number| REG["<b>Regression</b>"]
