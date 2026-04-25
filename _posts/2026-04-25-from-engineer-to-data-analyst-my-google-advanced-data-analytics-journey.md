@@ -29,7 +29,6 @@ This transformed model selection from trial-and-error into a systematic decision
 Here's how all the concepts I learned connect together:
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 graph TB
     subgraph " "
     DA["<b>Data Analytics Framework</b>"]
@@ -67,7 +66,6 @@ graph TB
 One of the most practical tools I developed was this decision framework:
 
 ```mermaid
-%%{init: {'theme':'neutral'}}%%
 graph TD
     START{{"What type of<br/>problem?"}}
     
