@@ -29,36 +29,45 @@ This transformed model selection from trial-and-error into a systematic decision
 Here's how all the concepts I learned connect together:
 
 ```mermaid
-graph
-    subgraph " "
-    DA["<b>Data Analytics Framework</b>"]
-    end
-    
-    DA --> SF["Statistical Foundation"]
-    DA --> RM["Regression Models"]
-    DA --> CM["Classification Models"]
-    DA --> DT["Data Techniques"]
-    
-    SF --> IS["Inferential Statistics<br/><i>Draw conclusions from samples</i>"]
-    SF --> DIST["Distributions<br/><i>Normal, Binomial, Poisson</i>"]
-    SF --> HT["Hypothesis Testing<br/><i>P-values & significance</i>"]
-    
-    HT --> TESTS["Statistical Tests<br/><i>Chi-square, F-test, T-test</i>"]
-    
-    RM --> LR["Linear Regression<br/><i>Continuous outcomes</i>"]
-    RM --> LOGR["Logistic Regression<br/><i>Binary classification</i>"]
-    
-    CM --> NB["Naive Bayes<br/><i>Probabilistic classifier</i>"]
-    CM --> TREE["Decision Trees<br/><i>Interpretable rules</i>"]
-    CM --> XGB["XGBoost<br/><i>Gradient boosting</i>"]
-    
-    DT --> CV["Cross Validation<br/><i>K-fold validation</i>"]
-    DT --> CI["Class Imbalance<br/><i>SMOTE, class weights</i>"]
-    
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#000
-    classDef center fill:#666,stroke:#333,stroke-width:3px,color:#fff
-    
-    class DA center
+mindmap
+  root((Data Analytics))
+    Statistical Foundation
+      Inferential Statistics
+      Distributions
+        Normal
+        Binomial
+        Poisson
+      Hypothesis Testing
+        P-values
+        Type I & II Errors
+      Statistical Tests
+        Chi-square
+        F-test
+        T-test
+    Regression Models
+      Linear Regression
+        Continuous outcomes
+        Assumptions checking
+      Logistic Regression
+        Binary classification
+        Probability estimates
+    Classification Models
+      Naive Bayes
+        Probabilistic
+        Fast baseline
+      Decision Trees
+        Interpretable
+        Non-linear
+      XGBoost
+        Gradient boosting
+        High accuracy
+    Data Techniques
+      Cross Validation
+        K-fold
+        Reliability testing
+      Class Imbalance
+        SMOTE
+        Class weights
 ```
 
 ## Decision Tree: Choosing the Right Model
@@ -66,36 +75,29 @@ graph
 One of the most practical tools I developed was this decision framework:
 
 ```mermaid
-graph
-    START{{"What type of<br/>problem?"}}
+graph TD
+    START{What type of problem?}
     
-    START -->|Predict a number| REG["<b>Regression</b>"]
-    START -->|Predict a category| CLASS["<b>Classification</b>"]
-    START -->|Find patterns| UNSUP["<b>Clustering</b>"]
+    START -->|Predict a number| REG[Regression]
+    START -->|Predict a category| CLASS[Classification]
+    START -->|Find patterns| UNSUP[Clustering]
     
-    REG --> REGQ{{"Linear<br/>relationship?"}}
-    REGQ -->|Yes| LINR["Linear Regression"]
-    REGQ -->|No| NONLIN{{"Need to<br/>explain it?"}}
-    NONLIN -->|Yes| TREEG["Decision Tree"]
-    NONLIN -->|No| XGBR["XGBoost"]
+    REG --> REGQ{Linear relationship?}
+    REGQ -->|Yes| LINR[Linear Regression]
+    REGQ -->|No| NONLIN{Need to explain it?}
+    NONLIN -->|Yes| TREEG[Decision Tree]
+    NONLIN -->|No| XGBR[XGBoost]
     
-    CLASS --> CLASSQ{{"Binary or<br/>Multi-class?"}}
-    CLASSQ -->|Binary| BIN{{"Need<br/>probabilities?"}}
-    CLASSQ -->|Multi-class| MULTI["Multinomial Logistic<br/>or Random Forest"]
+    CLASS --> CLASSQ{Binary or Multi-class?}
+    CLASSQ -->|Binary| BIN{Need probabilities?}
+    CLASSQ -->|Multi-class| MULTI[Multinomial Logistic or Random Forest]
     
-    BIN -->|Yes| LOGR["Logistic Regression"]
-    BIN -->|No| BINQ{{"Simple baseline<br/>needed?"}}
-    BINQ -->|Yes| NB["Naive Bayes"]
-    BINQ -->|No| XGBC["XGBoost"]
+    BIN -->|Yes| LOGR[Logistic Regression]
+    BIN -->|No| BINQ{Simple baseline needed?}
+    BINQ -->|Yes| NB[Naive Bayes]
+    BINQ -->|No| XGBC[XGBoost]
     
-    UNSUP --> KMEANS["K-means Clustering"]
-    
-    classDef default fill:#f9f9f9,stroke:#333,stroke-width:2px,color:#000
-    classDef decision fill:#e0e0e0,stroke:#333,stroke-width:2px,color:#000
-    classDef model fill:#c8c8c8,stroke:#333,stroke-width:2px,color:#000
-    
-    class START,REGQ,NONLIN,CLASSQ,BIN,BINQ decision
-    class LINR,TREEG,XGBR,LOGR,NB,XGBC,MULTI,KMEANS model
+    UNSUP --> KMEANS[K-means Clustering]
 ```
 
 ## What Actually Stuck
