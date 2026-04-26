@@ -49,20 +49,46 @@ order: 4
 ## Career & Education
 
 <style>
-  /* Allow the outer entry row to expand when details is open */
+  /* Allow the outer entry row to grow when details is open.
+     position:relative is required so ::before can use absolute positioning. */
   #archives ul li:has(details) {
+    position: relative;
     overflow: visible;
     height: auto;
     white-space: normal;
   }
 
-  /* Allow all content inside <details> to wrap normally */
-  #archives ul li details * {
+  /* Switch the timeline bar from float to absolute positioning.
+     Without this, removing overflow:hidden loses the BFC that isolated each
+     li's float — all li::before floats then share one float context and
+     accumulate 4px rightward per entry, creating the diagonal "crooked" line. */
+  #archives ul li:has(details)::before {
+    position: absolute !important;
+    float: none !important;
+    top: 0 !important;
+    left: 77px !important;
+  }
+
+  /* When the entry is open, stretch the timeline bar to the full li height. */
+  #archives ul li:has(details[open])::before {
+    bottom: 0 !important;
+    height: auto !important;
+  }
+
+  /* Keep the summary on one line so the collapsed li stays exactly 3rem tall
+     (prevents gaps in the timeline between entries). */
+  #archives ul li details summary {
+    white-space: nowrap;
+  }
+
+  /* Allow body content inside details to wrap normally. */
+  #archives ul li details p,
+  #archives ul li details ul {
     white-space: normal;
   }
 
-  /* Reset the nested bullet <li> elements — they inherit all the
-     archives timeline styles which are only meant for top-level rows */
+  /* Reset nested bullet <li> elements — they inherit archives timeline styles
+     (3rem line-height, gradient backgrounds, float ::before) which break them. */
   #archives ul li details ul li,
   #archives ul li details ul li:nth-child(odd) {
     font-size: 0.9rem !important;
@@ -73,16 +99,12 @@ order: 4
     background-image: none !important;
     color: var(--text-color) !important;
     height: auto !important;
+    white-space: normal !important;
   }
 
-  /* Remove the timeline bar that floats into each bullet point */
+  /* Remove the float timeline bar from nested bullets. */
   #archives ul li details ul li::before {
     display: none !important;
-  }
-
-  /* Tighten up spacing inside the expanded card */
-  #archives ul li details[open] {
-    margin-bottom: 0.5rem;
   }
 </style>
 
