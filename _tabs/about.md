@@ -1,5 +1,6 @@
 ---
 # the default layout is 'page'
+layout: page
 icon: fas fa-info-circle
 order: 4
 ---
@@ -46,6 +47,23 @@ order: 4
 </section>
 
 ## Career & Education
+
+<style>
+  #archives ul li:has(details) {
+    overflow: visible;
+    white-space: normal;
+    height: auto;
+    line-height: 3rem;
+  }
+  #archives ul li:has(details) details {
+    white-space: normal;
+    line-height: 1.6;
+    vertical-align: top;
+  }
+  #archives ul li:has(details) details[open] {
+    margin-bottom: 0.75rem;
+  }
+</style>
 
 <div id="archives" class="pl-xl-3">
 
