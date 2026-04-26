@@ -2,15 +2,13 @@
 title: Uninformed Search Algorithms
 date: February 11, 2025 8:06 PM
 categories:
-  - algorithms
+  - machine-learning
 tags:
-  - search
-  - ai
-  - algo
+  - search-algorithms
   - bfs
   - dfs
-  - ids
-  - lds
+  - ai-search
+  - ai
 description: Basic search algorithms
 toc: true
 comments: true

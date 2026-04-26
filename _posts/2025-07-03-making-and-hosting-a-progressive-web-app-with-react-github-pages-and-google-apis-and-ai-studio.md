@@ -2,14 +2,13 @@
 title: Making a Progressive Web App with Google AI Studio
 date: July 2, 2025 10:57 PM
 categories:
-  - webdev
+  - web-development
 tags:
   - pwa
-  - fe
-  - gh-pages
   - react
-  - google
-  - api
+  - google-ai-studio
+  - github-pages
+  - tutorial
 description: This project details the end-to-end process of building a
   Progressive Web App (PWA) using React, leveraging Google APIs for features
   like secure user login and data backup to Google Drive, managing local data

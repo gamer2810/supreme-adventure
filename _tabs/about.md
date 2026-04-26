@@ -10,7 +10,7 @@ order: 4
     <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Graduating M.S. Computer Science - Western Illinois University · Open to relocation (SF, LA, NYC)</p>
   </header>
 
-  <p class="text-base mb-4">I’m excited to share that I’ll be graduating in <strong>May 2026</strong> and am actively seeking <strong>New Grad Software Engineering</strong> roles starting Summer 2026.</p>
+  <p class="text-base mb-4">I'm excited to share that I'll be graduating in <strong>May 2026</strong> and am actively seeking <strong>New Grad Software Engineering</strong> roles starting Summer 2026.</p>
 
   <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-800 dark:text-gray-200">
     <li><strong>Built scalable systems</strong> at NAVER - fan engagement app (100K+ MAU, 50K DAU).</li>
@@ -45,7 +45,96 @@ order: 4
   </footer>
 </section>
 
+## Career & Education
 
+<div id="archives" class="pl-xl-3">
+
+  <time class="year lead d-block">2026</time>
+  <ul class="list-unstyled">
+    <li>
+      <span class="date day" style="font-size:85%;">Present</span>
+      <span class="date month small text-muted ms-1"></span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>EDUKAI: Master's Capstone Project</strong> &mdash; Western Illinois University</summary>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Jan 2026 – Present &nbsp;|&nbsp; OpenAI API, Python, React, FastAPI, Redis, MongoDB</p>
+        <ul style="margin-top: 0.5rem;">
+          <li>Architected full-stack educational platform integrating OpenAI API to deliver personalized learning experiences, adaptive feedback, and intelligent tutoring across multiple subjects</li>
+          <li>Designed evaluation framework to measure LLM performance on educational tasks: tracking response quality, pedagogical appropriateness, and student comprehension gains through systematic testing</li>
+          <li>Implemented data collection pipeline capturing student-AI interactions, learning patterns, and misconception detection to inform iterative prompt engineering and model behavior optimization</li>
+          <li>Developed safety considerations for educational AI: including content filtering, age-appropriate responses, and preventing over-reliance on AI assistance to maintain pedagogical integrity</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <span class="date day" style="font-size:85%;">May</span>
+      <span class="date month small text-muted ms-1">2026</span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>Teaching Assistant – Instructor of Record</strong> &mdash; Western Illinois University</summary>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Jan 2026 – May 2026 &nbsp;|&nbsp; CS101: Intro to Computer Science</p>
+        <ul style="margin-top: 0.5rem;">
+          <li>Taught interdisciplinary students core CS concepts, emphasizing clear technical communication and iterative problem-solving skills</li>
+          <li>Developed assessments to analyze student performance to identify learning gaps, demonstrating ability to design metrics and interpret empirical results</li>
+        </ul>
+      </details>
+    </li>
+    <li>
+      <span class="date day" style="font-size:85%;">May</span>
+      <span class="date month small text-muted ms-1">2026</span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>M.S. Computer Science</strong> &mdash; Western Illinois University</summary>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Aug 2024 – May 2026 (Expected) &nbsp;|&nbsp; GPA: 4.0/4.0</p>
+      </details>
+    </li>
+  </ul>
+
+  <time class="year lead d-block">2024</time>
+  <ul class="list-unstyled">
+    <li>
+      <span class="date day" style="font-size:85%;">Jun</span>
+      <span class="date month small text-muted ms-1">2024</span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>Backend Engineer</strong> &mdash; NAVER</summary>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Sep 2023 – Jun 2024 &nbsp;|&nbsp; Ho Chi Minh City, Vietnam</p>
+        <ul style="margin-top: 0.5rem;">
+          <li>Developed and maintained Spring Boot backend services for Phoning, a social platform connecting K-Pop idols (e.g., NewJeans) with ~50K monthly active users</li>
+          <li>Served as point of contact for two core features: Calendar – enabled idols to create events and engage with fan comments; Podcast – built podcast management workflows for labels, integrated with streaming platforms</li>
+          <li>Independently set up the production deployment environment using an in-house Kubernetes-based system, ensuring scalability, reliability, and secure operations</li>
+          <li>Conducted benchmarking and stress testing to maintain low latency under heavy read/write traffic and prevent unauthorized access</li>
+          <li>Collaborated with cross-functional teams in Korea, including developers and product managers, to deliver features on schedule</li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+
+  <time class="year lead d-block">2023</time>
+  <ul class="list-unstyled">
+    <li>
+      <span class="date day" style="font-size:85%;">Aug</span>
+      <span class="date month small text-muted ms-1">2023</span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>Backend Engineer</strong> &mdash; MoMo</summary>
+        <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Apr 2022 – Aug 2023 &nbsp;|&nbsp; Ho Chi Minh City, Vietnam</p>
+        <ul style="margin-top: 0.5rem;">
+          <li>Engineered Kafka-based event streaming pipelines processing 500K+ daily events</li>
+          <li>Optimized distributed microservices for 100K+ MAU with &lt;100ms p99 latency through systematic profiling and debugging</li>
+          <li>Deployed services on GCP Kubernetes with comprehensive observability tooling, balancing operational reliability with rapid iteration</li>
+        </ul>
+      </details>
+    </li>
+  </ul>
+
+  <time class="year lead d-block">2020</time>
+  <ul class="list-unstyled">
+    <li>
+      <span class="date day" style="font-size:85%;">Jun</span>
+      <span class="date month small text-muted ms-1">2020</span>
+      <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
+        <summary><strong>B.S. Software Engineering</strong> &mdash; VNUHCM - University of Science, Vietnam</summary>
+      </details>
+    </li>
+  </ul>
+
+</div>
 
 ## Resume
 

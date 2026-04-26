@@ -2,13 +2,12 @@
 title: Network Wiki for CS Students
 date: November 19, 2024 12:54 PM
 categories:
-  - Wiki
+  - networking
 tags:
-  - networks
-  - wiki
-  - cs
-  - undergrad
-  - grad
+  - tcp-ip
+  - osi-model
+  - cs-fundamentals
+  - study-guide
 description: A list of concepts taught in Computer Network course for reference purpose.
 toc: true
 comments: true

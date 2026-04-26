@@ -2,14 +2,14 @@
 title: Run Deepseek R-1 on your NVIDIA-powered Windows laptop
 date: February 2, 2025 7:10 PM
 categories:
-  - ai
+  - machine-learning
 tags:
   - deepseek
-  - tutorial
+  - local-llm
   - wsl
   - windows
   - nvidia
-  - r-1
+  - tutorial
 description: A very short walkthrough with ready-to-run commands to install
   Deepseek R-1 on your NVIDIA-powered Windows laptop.
 toc: true

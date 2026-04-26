@@ -2,13 +2,12 @@
 title: Landing a job on campus in the US
 date: August 25, 2025 10:24 AM
 categories:
-  - blog
+  - personal
 tags:
-  - wiu
-  - university
+  - career
+  - job-search
   - campus
-  - job
-  - il
+  - international-student
 description: I’ve just started my very first job in the United States as a
   Teaching Support Assistant at Western Illinois University, and it has already
   been such an eye-opening experience.

@@ -2,9 +2,11 @@
 title: Cloning Vampire Survivor with Unity
 date: May 12, 2025 10:36 AM
 categories:
-  - gamedev
+  - game-development
 tags:
   - unity
+  - game-development
+  - tutorial
 description: Cloning the Vampire Survivor game using Unity 6.
 toc: true
 comments: true

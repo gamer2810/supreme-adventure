@@ -2,13 +2,13 @@
 title: Showcase Steam Profile on your website!
 date: February 12, 2025 1:24 PM
 categories:
-  - webdev
+  - web-development
 tags:
-  - fe
   - steam
   - embed
-  - miniprofile
-  - steam-miniprofile
+  - javascript
+  - widget
+  - tutorial
 description: Are you a gamer who wants to proudly display your Steam profile on
   your website? I made a lightweight, customizable widget that brings your Steam
   identity to life on any web page!

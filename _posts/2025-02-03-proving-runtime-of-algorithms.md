@@ -2,12 +2,11 @@
 title: Proving runtime of algorithms
 date: February 2, 2025 7:40 PM
 categories:
-  - algorithm
+  - algorithms
 tags:
-  - analysis
-  - runtime
   - big-o
-  - proving-runtime
+  - time-complexity
+  - algorithm-analysis
 description: How to prove the Big-O notation, i.e. the runtime of algorithms
 toc: true
 comments: true

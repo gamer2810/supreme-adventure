@@ -1,10 +1,13 @@
 ---
 title: Overlapping Interval Idea
 date: October 12, 2024 12:53 AM
-categories: LeetCode
+categories:
+  - algorithms
 tags:
-  - algorithm
   - leetcode
+  - intervals
+  - java
+  - greedy
 description: "Solving LeetCode problem 2406: Divide Intervals Into Minimum Number of Groups"
 comments: true
 ---

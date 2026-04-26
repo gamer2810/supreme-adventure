@@ -2,12 +2,13 @@
 title: "Power Up Your Blog on GitHub: Effortless Online Editing and Free Hosting"
 date: November 9, 2024 3:46 PM
 categories:
-  - guide
+  - web-development
 tags:
   - jekyll
-  - cms
-  - decap
-  - blog
+  - github-pages
+  - decap-cms
+  - blogging
+  - tutorial
 description: "Deploy your own blog with the ability to add/edit content straight from the web with GitHub, Jekyll and DecapCMS."
 comments: true
 ---

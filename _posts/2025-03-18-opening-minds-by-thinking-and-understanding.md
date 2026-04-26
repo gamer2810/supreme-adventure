@@ -2,12 +2,10 @@
 title: Opening Minds By Thinking And Understanding
 date: March 17, 2025 11:02 PM
 categories:
-  - blog
+  - personal
 tags:
-  - thinking
-  - perspective
-  - understanding
-  - self-awareness
+  - mindset
+  - self-improvement
   - critical-thinking
 description: I had this random thought in the middle of the night about
   perspective and how understanding different viewpoints can really change the

@@ -2,11 +2,11 @@
 title: Sieve of Eratosthenes
 date: November 11, 2024 10:04 AM
 categories:
-  - CP Snippet
+  - algorithms
 tags:
-  - algorithm
-  - snippet
-  - leetcode
+  - competitive-programming
+  - number-theory
+  - prime-numbers
   - java
 description: Find all prime number in the range [1, max]
 toc: false

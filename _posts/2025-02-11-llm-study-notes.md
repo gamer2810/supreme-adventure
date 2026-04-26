@@ -2,11 +2,12 @@
 title: LLM Study Notes
 date: February 11, 2025 10:49 AM
 categories:
-  - ai
+  - machine-learning
 tags:
   - llm
-  - study
-  - notes
+  - large-language-models
+  - transformers
+  - study-notes
 description: Document what I learnt from a deep dive video on LLM
 toc: true
 comments: true

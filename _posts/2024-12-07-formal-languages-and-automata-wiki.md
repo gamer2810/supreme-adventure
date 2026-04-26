@@ -2,11 +2,11 @@
 title: Formal Languages And Automata Wiki
 date: December 7, 2024 4:49 PM
 categories:
-  - automata
+  - computer-science
 tags:
-  - wiki
-  - automata
-  - comsci
+  - automata-theory
+  - formal-languages
+  - theory-of-computation
 description: A table of content for all topics covered in the Automata course
 toc: true
 comments: true

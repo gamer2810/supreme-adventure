@@ -2,14 +2,12 @@
 title: Get a FREE Kubernetes cluster with Oracle Cloud Infrastructure
 date: February 4, 2025 5:05 PM
 categories:
-  - cloud
+  - cloud-computing
 tags:
-  - oci
   - kubernetes
-  - free
-  - k8s
-  - arm64
-  - cloud-platform
+  - oracle-cloud
+  - free-tier
+  - devops
 description: "Post migration from my previous blog. Reference:
   https://me.k3k.dev/2023/01/29/get-a-free-kubernetes-cluster-with-oracle-cloud\
   -infrastructure.html"

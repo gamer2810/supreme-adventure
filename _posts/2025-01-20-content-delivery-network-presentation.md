@@ -2,11 +2,11 @@
 title: Content Delivery Network Presentation
 date: January 20, 2025 10:29 AM
 categories:
-  - network
+  - networking
 tags:
-  - network
-  - CDN
-  - presentation
+  - cdn
+  - content-delivery-network
+  - web-performance
 description: A presentation for my Network class at WIU
 toc: true
 comments: true

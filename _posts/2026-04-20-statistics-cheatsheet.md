@@ -2,13 +2,13 @@
 title: Statistics Cheatsheet
 date: April 20, 2026 11:07 AM
 categories:
-  - stat
+  - data-analytics
 tags:
-  - data
+  - statistics
+  - eda
   - data-analysis
-  - stat
-  - EDA
-  - google
+  - cheatsheet
+  - python
 description: This is a cheatsheet for quick reference and knowledge refresh
   after Google's The Power of Statistics course.
 toc: true

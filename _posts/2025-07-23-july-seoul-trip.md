@@ -2,11 +2,11 @@
 title: "July Seoul Trip "
 date: July 23, 2025 1:29 AM
 categories:
-  - travel
+  - personal
 tags:
+  - travel
   - korea
   - seoul
-  - travel
 description: My personal guide to navigating the vibrant city of Seoul! This
   post is a collection of my plans, experiences, and observations from my trip.
   I hope my journey helps you plan yours.

@@ -2,12 +2,12 @@
 title: Prefix Sum
 date: November 11, 2024 10:04 AM
 categories:
-  - CP Snippet
+  - algorithms
 tags:
-  - algorithm
-  - snippet
-  - leetcode
+  - competitive-programming
+  - prefix-sum
   - java
+  - leetcode
 description: Pre-calculate and store the sum of elements from the start of the
   array to the current element.
 toc: false

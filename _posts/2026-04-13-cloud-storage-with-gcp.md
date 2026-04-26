@@ -2,7 +2,11 @@
 title: Cloud Storage with GCP
 date: April 13, 2026 1:20 PM
 categories:
-  - gcloud
+  - cloud-computing
+tags:
+  - gcp
+  - cloud-storage
+  - google-cloud
 description: "This is part 3 of my notes for the course: Google Cloud
   Fundamentals: Core Infrastructure."
 toc: true

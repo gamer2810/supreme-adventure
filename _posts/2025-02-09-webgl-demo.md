@@ -2,11 +2,12 @@
 title: WebGL demo
 date: February 8, 2025 8:36 PM
 categories:
-  - graphic
+  - web-development
 tags:
-  - webgl2
+  - webgl
+  - graphics-programming
+  - javascript
   - demo
-  - graphic
 description: Test embed graphic project
 toc: true
 comments: true

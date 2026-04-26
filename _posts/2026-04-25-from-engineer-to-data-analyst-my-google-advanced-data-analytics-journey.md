@@ -2,7 +2,12 @@
 title: "From Engineer to Data Analyst: My Google Advanced Data Analytics Journey"
 date: April 25, 2026 1:09 PM
 categories:
-  - data
+  - data-analytics
+tags:
+  - career-change
+  - google-certificate
+  - data-science
+  - python
 description: When it came to making data-driven decisions (understanding when a
   difference was significant, which model to trust, how to evaluate competing
   approaches), I was working more on intuition than solid foundations. That's

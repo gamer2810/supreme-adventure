@@ -2,11 +2,12 @@
 title: Virtual Machines and Networks
 date: April 13, 2026 11:17 AM
 categories:
-  - gcloud
+  - cloud-computing
 tags:
+  - gcp
+  - virtual-machines
+  - networking
   - google-cloud
-  - vm
-  - network
 description: "This is part 2 of my notes for the course: Google Cloud
   Fundamentals: Core Infrastructure."
 toc: true
