@@ -11,6 +11,7 @@ toc: true
 comments: true
 math: true
 image: false
+mermaid: true
 ---
 ## The Biggest Shift: Understanding When to Use Which Model
 
