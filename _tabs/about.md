@@ -49,19 +49,40 @@ order: 4
 ## Career & Education
 
 <style>
+  /* Allow the outer entry row to expand when details is open */
   #archives ul li:has(details) {
     overflow: visible;
-    white-space: normal;
     height: auto;
-    line-height: 3rem;
-  }
-  #archives ul li:has(details) details {
     white-space: normal;
-    line-height: 1.6;
-    vertical-align: top;
   }
-  #archives ul li:has(details) details[open] {
-    margin-bottom: 0.75rem;
+
+  /* Allow all content inside <details> to wrap normally */
+  #archives ul li details * {
+    white-space: normal;
+  }
+
+  /* Reset the nested bullet <li> elements — they inherit all the
+     archives timeline styles which are only meant for top-level rows */
+  #archives ul li details ul li,
+  #archives ul li details ul li:nth-child(odd) {
+    font-size: 0.9rem !important;
+    line-height: 1.6 !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    background: transparent !important;
+    background-image: none !important;
+    color: var(--text-color) !important;
+    height: auto !important;
+  }
+
+  /* Remove the timeline bar that floats into each bullet point */
+  #archives ul li details ul li::before {
+    display: none !important;
+  }
+
+  /* Tighten up spacing inside the expanded card */
+  #archives ul li details[open] {
+    margin-bottom: 0.5rem;
   }
 </style>
 
@@ -71,7 +92,6 @@ order: 4
   <ul class="list-unstyled">
     <li>
       <span class="date day" style="font-size:85%;">Present</span>
-      <span class="date month small text-muted ms-1"></span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>EDUKAI: Master's Capstone Project</strong> &mdash; Western Illinois University</summary>
         <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Jan 2026 – Present &nbsp;|&nbsp; OpenAI API, Python, React, FastAPI, Redis, MongoDB</p>
@@ -85,7 +105,6 @@ order: 4
     </li>
     <li>
       <span class="date day" style="font-size:85%;">May</span>
-      <span class="date month small text-muted ms-1">2026</span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>Teaching Assistant – Instructor of Record</strong> &mdash; Western Illinois University</summary>
         <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Jan 2026 – May 2026 &nbsp;|&nbsp; CS101: Intro to Computer Science</p>
@@ -97,7 +116,6 @@ order: 4
     </li>
     <li>
       <span class="date day" style="font-size:85%;">May</span>
-      <span class="date month small text-muted ms-1">2026</span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>M.S. Computer Science</strong> &mdash; Western Illinois University</summary>
         <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Aug 2024 – May 2026 (Expected) &nbsp;|&nbsp; GPA: 4.0/4.0</p>
@@ -109,7 +127,6 @@ order: 4
   <ul class="list-unstyled">
     <li>
       <span class="date day" style="font-size:85%;">Jun</span>
-      <span class="date month small text-muted ms-1">2024</span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>Backend Engineer</strong> &mdash; NAVER</summary>
         <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Sep 2023 – Jun 2024 &nbsp;|&nbsp; Ho Chi Minh City, Vietnam</p>
@@ -128,7 +145,6 @@ order: 4
   <ul class="list-unstyled">
     <li>
       <span class="date day" style="font-size:85%;">Aug</span>
-      <span class="date month small text-muted ms-1">2023</span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>Backend Engineer</strong> &mdash; MoMo</summary>
         <p style="margin: 0.5rem 0 0 0; font-size: 0.9rem; color: var(--text-muted-color);">Apr 2022 – Aug 2023 &nbsp;|&nbsp; Ho Chi Minh City, Vietnam</p>
@@ -145,7 +161,6 @@ order: 4
   <ul class="list-unstyled">
     <li>
       <span class="date day" style="font-size:85%;">Jun</span>
-      <span class="date month small text-muted ms-1">2020</span>
       <details style="display:inline-block; margin-left:2.5rem; vertical-align:top;">
         <summary><strong>B.S. Software Engineering</strong> &mdash; VNUHCM - University of Science, Vietnam</summary>
       </details>
