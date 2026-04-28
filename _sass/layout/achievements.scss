@@ -1,0 +1,176 @@
+/*
+ * Achievements page
+ */
+
+.achievements-page {
+  padding-bottom: 3rem;
+}
+
+.achv-section-title {
+  font-family: $font-family-heading;
+  color: var(--heading-color);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--main-border-color);
+}
+
+/* ── Stats row ─────────────────────────────────── */
+
+.achv-stats-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.achv-stat-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: $radius-lg;
+  padding: 0.5rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  img {
+    display: block;
+    border-radius: $radius-sm;
+  }
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+  }
+}
+
+/* ── Card grids ─────────────────────────────────── */
+
+.achv-card-grid {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.achv-cert-grid {
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.achv-proj-grid {
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+}
+
+/* Higher specificity overrides Bootstrap .card vars without !important */
+.achievements-page .achv-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  border-radius: $radius-lg;
+  color: var(--text-color);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--card-shadow);
+  }
+
+  .card-body {
+    color: var(--text-color);
+  }
+
+  .card-title {
+    color: var(--heading-color);
+    font-family: $font-family-heading;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+}
+
+.achv-cert-img {
+  object-fit: contain;
+  height: 160px;
+  padding: 1rem;
+  background-color: var(--card-bg);
+  border-radius: $radius-lg $radius-lg 0 0;
+}
+
+.achv-proj-img {
+  object-fit: cover;
+  height: 180px;
+  border-radius: $radius-lg $radius-lg 0 0;
+}
+
+.achv-issuer {
+  font-weight: 500;
+  color: var(--heading-color) !important;
+  font-size: 0.875rem;
+}
+
+.achv-date {
+  font-size: 0.8rem;
+  color: var(--text-muted-color) !important;
+}
+
+/* ── Buttons ────────────────────────────────────── */
+
+.achv-btn {
+  background-color: transparent;
+  color: var(--link-color);
+  border: 1px solid var(--link-color);
+  border-radius: $radius-sm;
+  font-size: 0.85rem;
+  padding: 0.3rem 0.75rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--link-color);
+    color: var(--main-bg);
+    text-decoration: none;
+  }
+}
+
+/* ── Embed (PDF / iframe) ───────────────────────── */
+
+.achv-embed-wrapper {
+  width: 100%;
+}
+
+.achv-embed-pdf,
+.achv-embed-iframe {
+  width: 100%;
+  height: 800px;
+  border: 1px solid var(--main-border-color);
+  border-radius: $radius-lg;
+  display: block;
+}
+
+/* ── Responsive ─────────────────────────────────── */
+
+@media (max-width: 576px) {
+  .achv-cert-grid,
+  .achv-proj-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .achv-embed-pdf,
+  .achv-embed-iframe {
+    height: 500px;
+  }
+
+  .achv-stats-row {
+    flex-direction: column;
+  }
+
+  .achv-stat-card {
+    width: 100%;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 991px) {
+  .achv-cert-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -28,7 +28,7 @@
         gap: 4px;
         background: #e0e7ff;
         color: #3730a3;
-        padding: 2px 10px 2px 10px;
+        padding: 2px 10px;
         border-radius: 12px;
         font-size: 13px;
         line-height: 1.6;
@@ -55,38 +55,19 @@
         padding: 2px 0;
         background: transparent;
       }
-      .tag-footer {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-top: 4px;
-      }
       .tag-hint {
         font-size: 11px;
         color: #888;
-        flex: 1;
+        margin-top: 4px;
       }
-      .tag-load-btn {
-        font-size: 11px;
-        padding: 2px 8px;
-        border: 1px solid #bbb;
-        border-radius: 4px;
-        background: #f5f5f5;
-        cursor: pointer;
-        color: #444;
-        white-space: nowrap;
-      }
-      .tag-load-btn:hover:not(:disabled) { background: #e8e8e8; border-color: #999; }
-      .tag-load-btn:disabled { opacity: 0.6; cursor: default; }
     </style>
   </head>
   <body>
     <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
     <script>
-      var REPO = 'gamer2810/supreme-adventure';
-      var POSTS_PATH = '_posts';
+      var POSTS_COLLECTION = 'blog';
 
-      // Shared state across all widget instances
+      // Shared taxonomy state across all widget instances
       var _taxonomyCache = null;
       var _loadState = 'idle'; // 'idle' | 'loading' | 'done' | 'error'
       var _subscribers = [];
@@ -102,58 +83,59 @@
         _subscribers.forEach(function(fn) { fn(); });
       }
 
-      function triggerLoad() {
-        if (_loadState === 'loading' || _loadState === 'done') return;
-        _loadState = 'loading';
-        notify();
-
-        fetch('https://api.github.com/repos/' + REPO + '/contents/' + POSTS_PATH)
-          .then(function(r) { return r.json(); })
-          .then(function(files) {
-            if (!Array.isArray(files)) return [];
-            return Promise.all(
-              files
-                .filter(function(f) { return f.name.endsWith('.md'); })
-                .map(function(f) { return fetch(f.download_url).then(function(r) { return r.text(); }); })
-            );
-          })
-          .then(function(texts) {
-            var cats = {};
-            var tags = {};
-            texts.forEach(function(text) {
-              var fmMatch = text.match(/^---\n([\s\S]*?)\n---/);
-              if (!fmMatch) return;
-              var block = fmMatch[1];
-
-              var catsM = block.match(/^categories:\s*\n((?:[ \t]*-[ \t]*.+\n?)*)/m);
-              if (catsM) {
-                catsM[1].split('\n').forEach(function(l) {
-                  var v = l.replace(/^[ \t]*-[ \t]*/, '').trim();
-                  if (v) cats[v] = true;
-                });
-              }
-
-              var tagsM = block.match(/^tags:\s*\n((?:[ \t]*-[ \t]*.+\n?)*)/m);
-              if (tagsM) {
-                tagsM[1].split('\n').forEach(function(l) {
-                  var v = l.replace(/^[ \t]*-[ \t]*/, '').trim();
-                  if (v) tags[v] = true;
-                });
-              }
-            });
-
-            _taxonomyCache = {
-              categories: Object.keys(cats).sort(),
-              tags: Object.keys(tags).sort()
-            };
-            _loadState = 'done';
-            notify();
-          })
-          .catch(function() {
-            _loadState = 'error';
-            notify();
-          });
+      // Extract categories and tags from Immutable.js entry list returned by getCollection
+      function extractTaxonomy(entries) {
+        var cats = {}, tags = {};
+        entries.forEach(function(entry) {
+          try {
+            var data = entry.get('data');
+            var c = data.get('categories');
+            var t = data.get('tags');
+            if (c && c.forEach) c.forEach(function(v) { if (v) cats[v] = true; });
+            if (t && t.forEach) t.forEach(function(v) { if (v) tags[v] = true; });
+          } catch (e) {}
+        });
+        return {
+          categories: Object.keys(cats).sort(),
+          tags: Object.keys(tags).sort()
+        };
       }
+
+      // Register a preview template for the blog collection.
+      // getCollection is only available as a prop here — this is the DecapCMS-native
+      // way to read all entries. The preview pane renders automatically when a post
+      // is open, so taxonomy loads without any manual trigger.
+      var BlogPreviewTemplate = createClass({
+        componentDidMount: function() {
+          if (_loadState !== 'idle') return;
+          _loadState = 'loading';
+          notify();
+          this.props.getCollection(POSTS_COLLECTION)
+            .then(function(entries) {
+              _taxonomyCache = extractTaxonomy(entries);
+              _loadState = 'done';
+              notify();
+            })
+            .catch(function() {
+              _loadState = 'error';
+              notify();
+            });
+        },
+        render: function() {
+          var h = window.h;
+          var entry = this.props.entry;
+          return h('div', { style: { fontFamily: 'sans-serif', padding: '1rem' } },
+            h('h1', { style: { fontSize: '1.5rem', marginBottom: '0.5rem' } },
+              entry.getIn(['data', 'title'])
+            ),
+            this.props.widgetFor('body')
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate(POSTS_COLLECTION, BlogPreviewTemplate);
+
+      // ── Helpers ──────────────────────────────────────────────────────────────
 
       function toArray(val) {
         if (!val) return [];
@@ -170,6 +152,8 @@
         return arr;
       }
 
+      // ── Tag autocomplete widget ───────────────────────────────────────────────
+
       var TagControl = createClass({
         getInitialState: function() {
           return { inputValue: '', suggestions: [] };
@@ -177,13 +161,19 @@
 
         componentDidMount: function() {
           var self = this;
-          // Subscribe to global load state so all widgets update together
+          var fieldName = self.props.field.get('name');
+
+          // Apply immediately if taxonomy already loaded (e.g. second widget mount)
+          if (_loadState === 'done' && _taxonomyCache) {
+            self.setState({ suggestions: _taxonomyCache[fieldName] || [] });
+          }
+
+          // Subscribe so all widget instances update together when load completes
           this._unsubscribe = subscribe(function() {
-            var fieldName = self.props.field.get('name');
-            self.forceUpdate();
             if (_loadState === 'done' && _taxonomyCache) {
               self.setState({ suggestions: _taxonomyCache[fieldName] || [] });
             }
+            self.forceUpdate();
           });
         },
 
@@ -197,7 +187,6 @@
           var current = toArray(this.props.value);
           if (!current.includes(tag)) {
             this.props.onChange(makeList(current.concat([tag])));
-            // Add to local suggestions so it appears for future use in this session
             if (!this.state.suggestions.includes(tag)) {
               this.setState({ suggestions: this.state.suggestions.concat([tag]).sort() });
             }
@@ -225,7 +214,6 @@
 
         handleChange: function(e) {
           var val = e.target.value;
-          // Datalist selection doesn't fire keydown; detect comma in value
           if (val.endsWith(',')) {
             this.addTag(val.slice(0, -1));
           } else {
@@ -240,11 +228,17 @@
         },
 
         render: function() {
-          var h = CMS.h;
+          var h = window.h;
           var self = this;
           var current = toArray(this.props.value);
           var fieldName = this.props.field.get('name');
           var listId = 'tag-suggestions-' + fieldName;
+
+          var hint =
+            _loadState === 'loading' ? 'Loading suggestions from posts…' :
+            _loadState === 'error'   ? 'Could not load suggestions.' :
+            _loadState === 'done'    ? 'Press Enter or comma to add. Suggestions from existing posts.' :
+                                       'Press Enter or comma to add a tag.';
 
           return h('div', null,
             h('div', {
@@ -278,23 +272,14 @@
                   .map(function(s) { return h('option', { key: s, value: s }); })
               )
             ),
-            h('div', { className: 'tag-footer' },
-              h('span', { className: 'tag-hint' }, 'Press Enter or comma to add a tag.'),
-              _loadState === 'idle'
-                ? h('button', { type: 'button', className: 'tag-load-btn', onClick: triggerLoad }, 'Load suggestions')
-                : _loadState === 'loading'
-                  ? h('span', { className: 'tag-hint' }, 'Loading suggestions…')
-                  : _loadState === 'error'
-                    ? h('button', { type: 'button', className: 'tag-load-btn', onClick: triggerLoad }, 'Retry')
-                    : h('span', { className: 'tag-hint' }, 'Suggestions loaded ✓')
-            )
+            h('p', { className: 'tag-hint' }, hint)
           );
         }
       });
 
       var TagPreview = createClass({
         render: function() {
-          var h = CMS.h;
+          var h = window.h;
           var value = toArray(this.props.value);
           return h('div', null, value.join(', '));
         }

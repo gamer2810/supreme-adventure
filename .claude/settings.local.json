@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -E \"^-.*\\\\.\\(md|html\\)$\")",
+      "WebFetch(domain:decapcms.org)"
+    ]
+  }
+}
