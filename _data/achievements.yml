@@ -4,10 +4,13 @@ sections:
     items:
       - src: "https://github-readme-stats.vercel.app/api?username=gamer2810&show_icons=true&theme=transparent&hide_border=true&count_private=true"
         alt: "GitHub Stats"
+        size: md   # 2 of 3 columns
       - src: "https://github-readme-stats.vercel.app/api/top-langs/?username=gamer2810&layout=compact&theme=transparent&hide_border=true&langs_count=8"
         alt: "Top Languages"
+        size: sm   # 1 of 3 columns — sits next to stats
       - src: "https://streak-stats.demolab.com/?user=gamer2810&theme=transparent&hide_border=true"
         alt: "GitHub Streak"
+        size: md   # full row
 
   - title: "Certifications"
     type: certifications
@@ -15,8 +18,9 @@ sections:
       - title: "Google Advanced Data Analytics"
         issuer: "Google / Coursera"
         date: "2025"
+        size: sm   # 1 of 3 columns
         image: ""       # place badge image in assets/img/uploads/ and update path, or leave blank
-        link: ""        # add Credly/Coursera credential URL
+        link: "https://www.coursera.org/account/accomplishments/specialization/V9VB0DS5X142"        # add Credly/Coursera credential URL
 
   - title: "Featured Works"
     type: projects
@@ -26,6 +30,7 @@ sections:
           Embeddable Steam profile widget adopted by 100+ sites.
           Displays real-time Steam status, avatar, and game activity via an iframe.
         image: "/assets/img/uploads/steam-miniprofile.png"
+        size: md   # 2 of 3 columns
         links:
           - label: "GitHub"
             url: "https://github.com/gamer2810/steam-miniprofile"
@@ -34,12 +39,13 @@ sections:
           Price-tracking web app that monitors product listings
           and notifies when prices drop to a target threshold.
         image: "/assets/img/preview/preview.jpg"
+        size: sm   # 1 of 3 columns — fills the remaining column
         links:
           - label: "Visit Site"
             url: "https://shopping.k3k.dev"
 
-  - title: "Academic Transcript"
-    type: embed
-    kind: pdf
-    src: "/assets/resume/mktran-resume-summer2026.pdf"
-    download: "mktran_resume.pdf"
+  # - title: "Academic Transcript"
+  #   type: embed
+  #   kind: pdf
+  #   src: "/assets/resume/mktran-resume-summer2026.pdf"
+  #   download: "mktran_resume.pdf"

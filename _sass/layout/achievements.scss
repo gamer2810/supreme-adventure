@@ -16,14 +16,27 @@
   border-bottom: 2px solid var(--main-border-color);
 }
 
-/* ── Stats row ─────────────────────────────────── */
+/* ── Unified 3-column grid ──────────────────────────────────────────────────
+   All section types (stats, certifications, projects) share this grid.
+   Items declare their width via achv-size-{sm,md,lg}:
+     sm → span 1 col  (1/3 of row)
+     md → span 2 cols (2/3 of row)
+     lg → span 3 cols (full row)
+   CSS Grid's auto-placement packs items row by row, minimising gaps.
+   ───────────────────────────────────────────────────────────────────────── */
 
-.achv-stats-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  align-items: flex-start;
+.achv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  align-items: start;
 }
+
+.achv-size-sm { grid-column: span 1; }
+.achv-size-md { grid-column: span 2; }
+.achv-size-lg { grid-column: span 3; }
+
+/* ── Stat image cards ───────────────────────────── */
 
 .achv-stat-card {
   background-color: var(--card-bg);
@@ -34,6 +47,8 @@
 
   img {
     display: block;
+    width: 100%;
+    height: auto;
     border-radius: $radius-sm;
   }
 
@@ -43,22 +58,9 @@
   }
 }
 
-/* ── Card grids ─────────────────────────────────── */
+/* ── Content cards (certs & projects) ───────────── */
 
-.achv-card-grid {
-  display: grid;
-  gap: 1.25rem;
-}
-
-.achv-cert-grid {
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-}
-
-.achv-proj-grid {
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-}
-
-/* Higher specificity overrides Bootstrap .card vars without !important */
+/* Higher specificity avoids !important when overriding Bootstrap .card */
 .achievements-page .achv-card {
   background-color: var(--card-bg);
   border: 1px solid var(--main-border-color);
@@ -71,9 +73,7 @@
     box-shadow: var(--card-shadow);
   }
 
-  .card-body {
-    color: var(--text-color);
-  }
+  .card-body { color: var(--text-color); }
 
   .card-title {
     color: var(--heading-color);
@@ -134,9 +134,7 @@
 
 /* ── Embed (PDF / iframe) ───────────────────────── */
 
-.achv-embed-wrapper {
-  width: 100%;
-}
+.achv-embed-wrapper { width: 100%; }
 
 .achv-embed-pdf,
 .achv-embed-iframe {
@@ -149,28 +147,31 @@
 
 /* ── Responsive ─────────────────────────────────── */
 
+/* Tablet: collapse to 2-column grid; lg still spans full row */
+@media (max-width: 991px) {
+  .achv-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .achv-size-sm { grid-column: span 1; }
+  .achv-size-md { grid-column: span 2; }
+  .achv-size-lg { grid-column: span 2; }
+}
+
+/* Mobile: single column — all sizes stack */
 @media (max-width: 576px) {
-  .achv-cert-grid,
-  .achv-proj-grid {
+  .achv-grid {
     grid-template-columns: 1fr;
+  }
+
+  .achv-size-sm,
+  .achv-size-md,
+  .achv-size-lg {
+    grid-column: span 1;
   }
 
   .achv-embed-pdf,
   .achv-embed-iframe {
     height: 500px;
-  }
-
-  .achv-stats-row {
-    flex-direction: column;
-  }
-
-  .achv-stat-card {
-    width: 100%;
-  }
-}
-
-@media (min-width: 577px) and (max-width: 991px) {
-  .achv-cert-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 }

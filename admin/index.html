@@ -265,12 +265,14 @@
                 onChange: this.handleChange,
                 onKeyDown: this.handleKeyDown,
                 onBlur: this.handleBlur
-              }),
-              h('datalist', { id: listId },
-                this.state.suggestions
-                  .filter(function(s) { return !current.includes(s); })
-                  .map(function(s) { return h('option', { key: s, value: s }); })
-              )
+              })
+            ),
+            // datalist must be outside the flex container so the browser can
+            // correctly position the dropdown relative to the input
+            h('datalist', { id: listId },
+              this.state.suggestions
+                .filter(function(s) { return !current.includes(s); })
+                .map(function(s) { return h('option', { key: s, value: s }); })
             ),
             h('p', { className: 'tag-hint' }, hint)
           );

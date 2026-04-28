@@ -16,18 +16,20 @@ layout: default
       {% case section.type %}
 
         {% when 'stats' %}
-          <div class="achv-stats-row">
+          <div class="achv-grid">
             {% for item in section.items %}
-              <div class="achv-stat-card">
-                <img src="{{ item.src }}" alt="{{ item.alt }}" loading="lazy" class="img-fluid" />
+              {% assign sz = item.size | default: 'md' %}
+              <div class="achv-stat-card achv-size-{{ sz }}">
+                <img src="{{ item.src }}" alt="{{ item.alt }}" class="w-100" />
               </div>
             {% endfor %}
           </div>
 
         {% when 'certifications' %}
-          <div class="achv-card-grid achv-cert-grid">
+          <div class="achv-grid">
             {% for item in section.items %}
-              <div class="achv-card card h-100">
+              {% assign sz = item.size | default: 'sm' %}
+              <div class="achv-card card h-100 achv-size-{{ sz }}">
                 {% if item.image and item.image != "" %}
                   <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">
                     <img src="{{ item.image }}" alt="{{ item.title }}" class="card-img-top achv-cert-img" loading="lazy" />
@@ -48,9 +50,10 @@ layout: default
           </div>
 
         {% when 'projects' %}
-          <div class="achv-card-grid achv-proj-grid">
+          <div class="achv-grid">
             {% for item in section.items %}
-              <div class="achv-card card h-100">
+              {% assign sz = item.size | default: 'md' %}
+              <div class="achv-card card h-100 achv-size-{{ sz }}">
                 {% if item.image and item.image != "" %}
                   <img src="{{ item.image }}" alt="{{ item.title }}" class="card-img-top achv-proj-img" loading="lazy" />
                 {% endif %}
