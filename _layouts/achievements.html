@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: page
 ---
 
 {% include lang.html %}
@@ -20,7 +20,7 @@ layout: default
             {% for item in section.items %}
               {% assign sz = item.size | default: 'md' %}
               <div class="achv-stat-card achv-size-{{ sz }}">
-                <img src="{{ item.src }}" alt="{{ item.alt }}" />
+                <img src="{{ item.src }}" alt="{{ item.alt }}" class="w-100" />
               </div>
             {% endfor %}
           </div>

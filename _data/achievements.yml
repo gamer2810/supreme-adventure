@@ -10,7 +10,7 @@ sections:
         size: sm   # 1 of 3 columns — sits next to stats
       - src: "https://streak-stats.demolab.com/?user=gamer2810&theme=transparent&hide_border=true"
         alt: "GitHub Streak"
-        size: lg   # full row
+        size: lg    # full row
 
   - title: "Certifications"
     type: certifications
