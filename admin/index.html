@@ -5,9 +5,302 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+    <style>
+      .tag-control {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 6px;
+        padding: 6px 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        min-height: 42px;
+        cursor: text;
+        background: #fff;
+      }
+      .tag-control:focus-within {
+        border-color: #6c6f85;
+        box-shadow: 0 0 0 2px rgba(108, 111, 133, 0.15);
+      }
+      .tag-chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        background: #e0e7ff;
+        color: #3730a3;
+        padding: 2px 10px 2px 10px;
+        border-radius: 12px;
+        font-size: 13px;
+        line-height: 1.6;
+        white-space: nowrap;
+      }
+      .tag-chip-remove {
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #6366f1;
+        font-size: 15px;
+        line-height: 1;
+        padding: 0 0 0 2px;
+        display: flex;
+        align-items: center;
+      }
+      .tag-chip-remove:hover { color: #4338ca; }
+      .tag-input {
+        border: none;
+        outline: none;
+        min-width: 120px;
+        flex: 1;
+        font-size: 14px;
+        padding: 2px 0;
+        background: transparent;
+      }
+      .tag-footer {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        margin-top: 4px;
+      }
+      .tag-hint {
+        font-size: 11px;
+        color: #888;
+        flex: 1;
+      }
+      .tag-load-btn {
+        font-size: 11px;
+        padding: 2px 8px;
+        border: 1px solid #bbb;
+        border-radius: 4px;
+        background: #f5f5f5;
+        cursor: pointer;
+        color: #444;
+        white-space: nowrap;
+      }
+      .tag-load-btn:hover:not(:disabled) { background: #e8e8e8; border-color: #999; }
+      .tag-load-btn:disabled { opacity: 0.6; cursor: default; }
+    </style>
   </head>
   <body>
-    <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.3.3/dist/decap-cms.js"></script>
+    <script>
+      var REPO = 'gamer2810/supreme-adventure';
+      var POSTS_PATH = '_posts';
+
+      // Shared state across all widget instances
+      var _taxonomyCache = null;
+      var _loadState = 'idle'; // 'idle' | 'loading' | 'done' | 'error'
+      var _subscribers = [];
+
+      function subscribe(fn) {
+        _subscribers.push(fn);
+        return function unsubscribe() {
+          _subscribers = _subscribers.filter(function(f) { return f !== fn; });
+        };
+      }
+
+      function notify() {
+        _subscribers.forEach(function(fn) { fn(); });
+      }
+
+      function triggerLoad() {
+        if (_loadState === 'loading' || _loadState === 'done') return;
+        _loadState = 'loading';
+        notify();
+
+        fetch('https://api.github.com/repos/' + REPO + '/contents/' + POSTS_PATH)
+          .then(function(r) { return r.json(); })
+          .then(function(files) {
+            if (!Array.isArray(files)) return [];
+            return Promise.all(
+              files
+                .filter(function(f) { return f.name.endsWith('.md'); })
+                .map(function(f) { return fetch(f.download_url).then(function(r) { return r.text(); }); })
+            );
+          })
+          .then(function(texts) {
+            var cats = {};
+            var tags = {};
+            texts.forEach(function(text) {
+              var fmMatch = text.match(/^---\n([\s\S]*?)\n---/);
+              if (!fmMatch) return;
+              var block = fmMatch[1];
+
+              var catsM = block.match(/^categories:\s*\n((?:[ \t]*-[ \t]*.+\n?)*)/m);
+              if (catsM) {
+                catsM[1].split('\n').forEach(function(l) {
+                  var v = l.replace(/^[ \t]*-[ \t]*/, '').trim();
+                  if (v) cats[v] = true;
+                });
+              }
+
+              var tagsM = block.match(/^tags:\s*\n((?:[ \t]*-[ \t]*.+\n?)*)/m);
+              if (tagsM) {
+                tagsM[1].split('\n').forEach(function(l) {
+                  var v = l.replace(/^[ \t]*-[ \t]*/, '').trim();
+                  if (v) tags[v] = true;
+                });
+              }
+            });
+
+            _taxonomyCache = {
+              categories: Object.keys(cats).sort(),
+              tags: Object.keys(tags).sort()
+            };
+            _loadState = 'done';
+            notify();
+          })
+          .catch(function() {
+            _loadState = 'error';
+            notify();
+          });
+      }
+
+      function toArray(val) {
+        if (!val) return [];
+        if (typeof val.toJS === 'function') return val.toJS();
+        if (typeof val.toArray === 'function') return val.toArray();
+        if (Array.isArray(val)) return val;
+        return [];
+      }
+
+      function makeList(arr) {
+        if (window.Immutable && window.Immutable.List) {
+          return window.Immutable.List(arr);
+        }
+        return arr;
+      }
+
+      var TagControl = createClass({
+        getInitialState: function() {
+          return { inputValue: '', suggestions: [] };
+        },
+
+        componentDidMount: function() {
+          var self = this;
+          // Subscribe to global load state so all widgets update together
+          this._unsubscribe = subscribe(function() {
+            var fieldName = self.props.field.get('name');
+            self.forceUpdate();
+            if (_loadState === 'done' && _taxonomyCache) {
+              self.setState({ suggestions: _taxonomyCache[fieldName] || [] });
+            }
+          });
+        },
+
+        componentWillUnmount: function() {
+          if (this._unsubscribe) this._unsubscribe();
+        },
+
+        addTag: function(raw) {
+          var tag = raw.trim().replace(/,+$/, '').trim();
+          if (!tag) return;
+          var current = toArray(this.props.value);
+          if (!current.includes(tag)) {
+            this.props.onChange(makeList(current.concat([tag])));
+            // Add to local suggestions so it appears for future use in this session
+            if (!this.state.suggestions.includes(tag)) {
+              this.setState({ suggestions: this.state.suggestions.concat([tag]).sort() });
+            }
+          }
+          this.setState({ inputValue: '' });
+        },
+
+        removeTag: function(tag) {
+          var current = toArray(this.props.value);
+          this.props.onChange(makeList(current.filter(function(t) { return t !== tag; })));
+        },
+
+        handleKeyDown: function(e) {
+          var val = this.state.inputValue;
+          if ((e.key === 'Enter' || e.key === ',') && val.trim()) {
+            e.preventDefault();
+            this.addTag(val);
+          } else if (e.key === 'Backspace' && !val) {
+            var current = toArray(this.props.value);
+            if (current.length) {
+              this.props.onChange(makeList(current.slice(0, -1)));
+            }
+          }
+        },
+
+        handleChange: function(e) {
+          var val = e.target.value;
+          // Datalist selection doesn't fire keydown; detect comma in value
+          if (val.endsWith(',')) {
+            this.addTag(val.slice(0, -1));
+          } else {
+            this.setState({ inputValue: val });
+          }
+        },
+
+        handleBlur: function() {
+          if (this.state.inputValue.trim()) {
+            this.addTag(this.state.inputValue);
+          }
+        },
+
+        render: function() {
+          var h = CMS.h;
+          var self = this;
+          var current = toArray(this.props.value);
+          var fieldName = this.props.field.get('name');
+          var listId = 'tag-suggestions-' + fieldName;
+
+          return h('div', null,
+            h('div', {
+              className: 'tag-control',
+              onClick: function() { self.inputRef && self.inputRef.focus(); }
+            },
+              current.map(function(tag) {
+                return h('span', { key: tag, className: 'tag-chip' },
+                  tag,
+                  h('button', {
+                    type: 'button',
+                    className: 'tag-chip-remove',
+                    title: 'Remove',
+                    onClick: function(e) { e.stopPropagation(); self.removeTag(tag); }
+                  }, '×')
+                );
+              }),
+              h('input', {
+                list: listId,
+                className: 'tag-input',
+                value: this.state.inputValue,
+                placeholder: current.length ? '' : 'Type and press Enter or comma…',
+                ref: function(el) { self.inputRef = el; },
+                onChange: this.handleChange,
+                onKeyDown: this.handleKeyDown,
+                onBlur: this.handleBlur
+              }),
+              h('datalist', { id: listId },
+                this.state.suggestions
+                  .filter(function(s) { return !current.includes(s); })
+                  .map(function(s) { return h('option', { key: s, value: s }); })
+              )
+            ),
+            h('div', { className: 'tag-footer' },
+              h('span', { className: 'tag-hint' }, 'Press Enter or comma to add a tag.'),
+              _loadState === 'idle'
+                ? h('button', { type: 'button', className: 'tag-load-btn', onClick: triggerLoad }, 'Load suggestions')
+                : _loadState === 'loading'
+                  ? h('span', { className: 'tag-hint' }, 'Loading suggestions…')
+                  : _loadState === 'error'
+                    ? h('button', { type: 'button', className: 'tag-load-btn', onClick: triggerLoad }, 'Retry')
+                    : h('span', { className: 'tag-hint' }, 'Suggestions loaded ✓')
+            )
+          );
+        }
+      });
+
+      var TagPreview = createClass({
+        render: function() {
+          var h = CMS.h;
+          var value = toArray(this.props.value);
+          return h('div', null, value.join(', '));
+        }
+      });
+
+      CMS.registerWidget('tag-autocomplete', TagControl, TagPreview);
+    </script>
   </body>
 </html>

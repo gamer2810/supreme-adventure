@@ -36,8 +36,8 @@ collections:
           format: "LLL",
           picker_utc: false,
         }
-      - { label: "Categories", name: "categories", widget: "list" }
-      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Categories", name: "categories", widget: "tag-autocomplete" }
+      - { label: "Tags", name: "tags", widget: "tag-autocomplete" }
       - { label: "Description", name: "description", widget: "string" }
       - { label: "TOC", name: "toc", widget: "boolean", default: true }
       - {
