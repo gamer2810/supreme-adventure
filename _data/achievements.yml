@@ -10,7 +10,7 @@ sections:
         size: sm   # 1 of 3 columns — sits next to stats
       - src: "https://streak-stats.demolab.com/?user=gamer2810&theme=transparent&hide_border=true"
         alt: "GitHub Streak"
-        size: md   # full row
+        size: lg   # full row
 
   - title: "Certifications"
     type: certifications
@@ -29,7 +29,7 @@ sections:
         description: >
           Embeddable Steam profile widget adopted by 100+ sites.
           Displays real-time Steam status, avatar, and game activity via an iframe.
-        image: "/assets/img/uploads/steam-miniprofile.png"
+        # image: "/assets/img/uploads/steam-miniprofile.png"
         size: md   # 2 of 3 columns
         links:
           - label: "GitHub"
@@ -38,7 +38,7 @@ sections:
         description: >
           Price-tracking web app that monitors product listings
           and notifies when prices drop to a target threshold.
-        image: "/assets/img/preview/preview.jpg"
+        # image: "/assets/img/preview/preview.jpg"
         size: sm   # 1 of 3 columns — fills the remaining column
         links:
           - label: "Visit Site"
