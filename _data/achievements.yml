@@ -15,13 +15,18 @@ sections:
   - title: "Certifications"
     type: certifications
     items:
-      - title: "Google Advanced Data Analytics"
-        issuer: "Google / Coursera"
-        date: "2025"
-        size: sm   # 1 of 3 columns
-        image: ""       # place badge image in assets/img/uploads/ and update path, or leave blank
-        link: "https://www.coursera.org/account/accomplishments/specialization/V9VB0DS5X142"        # add Credly/Coursera credential URL
-
+      - title: "Implement Load Balancing on Compute Engine Skill Badge"
+        issuer: "Google Cloud"
+        date: "2026-05-03"
+        size: sm
+        image: "https://images.credly.com/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png"
+        link: "https://www.credly.com/org/google-cloud/badge/implement-load-balancing-on-compute-engine-skill-ba"
+      - title: "Google Advanced Data Analytics Professional Certificate"
+        issuer: "Coursera"
+        date: "2026-04-26"
+        size: sm
+        image: "https://images.credly.com/images/861df0cf-62e2-42d5-9980-3aed808cc462/blob"
+        link: "https://www.credly.com/org/coursera/badge/google-advanced-data-analytics-professional-certifi.1"
   - title: "Featured Works"
     type: projects
     items:
