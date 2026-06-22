@@ -89,7 +89,7 @@ title: About
           </div>
         </a>
         <a class="about-cert-item" href="https://www.credly.com/badges/4191393f-8d3c-45ec-8a2e-1713e2dad160" target="_blank" rel="noopener">
-          <img src=../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
+          <img src="../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
           <div>
             <div class="about-cert-name">Advanced Data Analytics</div>
             <div class="about-cert-issuer">Google / Coursera · Apr 2026</div>
