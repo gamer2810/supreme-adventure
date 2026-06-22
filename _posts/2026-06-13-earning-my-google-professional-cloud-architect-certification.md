@@ -1,5 +1,5 @@
 ---
-title: "Earning the Google Professional Cloud Architect Certification"
+title: Earning the Google Professional Cloud Architect Certification
 date: June 13, 2026 8:30 AM
 categories:
   - cloud
@@ -8,11 +8,14 @@ tags:
   - certification
   - professional-cloud-architect
   - gear
-description: On June 12th, 2026, I passed the Google Professional Cloud Architect exam. Here is how six weeks of structured training through GEAR Get Certified changed the way I think about cloud systems — and what actually made the exam difficult.
+description: On June 12th, 2026, I passed the Google Professional Cloud
+  Architect exam. Here is how six weeks of structured training through GEAR Get
+  Certified changed the way I think about cloud systems — and what actually made
+  the exam difficult.
 toc: true
 comments: true
 math: false
-image: false
+image: /assets/img/uploads/professional_linkedin-2x.jpg
 ---
 
 ## The Certification
