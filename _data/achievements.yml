@@ -19,7 +19,6 @@ sections:
         issuer: "Western Illinois University"
         date: "2026-05"
         size: lg
-        link: "https://www.wiu.edu/cas/computer_sciences/"
 
   - title: "Certifications"
     type: certifications
@@ -29,7 +28,7 @@ sections:
         date: "2026-06-12"
         size: sm
         image: "../assets/img/uploads/google_pca_cert.png"
-        link: "https://www.credly.com/users/mkt"
+        link: "https://www.credly.com/badges/1fae2bf1-ba5b-4c2b-9a42-ea17ab4599e1"
       - title: "Google Advanced Data Analytics Professional Certificate"
         issuer: "Coursera"
         date: "2026-04-26"
