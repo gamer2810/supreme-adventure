@@ -78,13 +78,13 @@ title: About
     <section class="about-section">
       <h2 class="about-section-title">Certifications</h2>
       <div class="about-cert-list">
-        <img src="../assets/img/uploads/google_pca_cert.png" alt="Google Professional Cloud Architect badge" class="about-cert-badge" />
         <div>
+          <img src="../assets/img/uploads/google_pca_cert.png" alt="Google Professional Cloud Architect badge" class="about-cert-badge" />
           <div class="about-cert-name">Professional Cloud Architect</div>
           <div class="about-cert-issuer">Google Cloud · Jun 2026</div>
         </div>
-        <img src="../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
         <div>
+          <img src="../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
           <div class="about-cert-name">Advanced Data Analytics</div>
           <div class="about-cert-issuer">Google / Coursera · Apr 2026</div>
         </div>
