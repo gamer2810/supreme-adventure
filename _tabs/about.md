@@ -8,13 +8,6 @@ title: About
 <div class="about-page">
 
   <div class="about-hero">
-    <div class="about-metrics">
-      <span>100K+ MAU</span>
-      <span class="about-metrics-sep">·</span>
-      <span>1.2s → 100ms</span>
-      <span class="about-metrics-sep">·</span>
-      <span>4.0 GPA</span>
-    </div>
     <h1 class="about-name">Kha (Kai) Tran</h1>
     <p class="about-title-line">Software Engineer &amp; Google Professional Cloud Architect</p>
     <p class="about-status-line">
@@ -74,6 +67,13 @@ title: About
           </div>
           <div class="about-edu-degree">M.S. Computer Science &mdash; <strong>4.0 GPA</strong></div>
           <div class="about-edu-detail">Capstone: EduKai &mdash; AI tutoring platform (LangGraph multi-agent · RAG pipeline · FSRS scheduling)</div>
+        </div>
+        <div class="about-edu-item">
+          <div class="about-edu-header">
+            <span class="about-edu-school">VNUHCM - University of Science</span>
+            <span class="about-edu-period">2020</span>
+          </div>
+          <div class="about-edu-degree">B.S. Computer Science &mdash; </div>
         </div>
       </div>
     </section>
