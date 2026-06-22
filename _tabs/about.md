@@ -78,20 +78,16 @@ title: About
     <section class="about-section">
       <h2 class="about-section-title">Certifications</h2>
       <div class="about-cert-list">
-        <a class="about-cert-item" href="https://www.credly.com/users/mkt" target="_blank" rel="noopener">
-          <img src="../assets/img/uploads/google_pca_cert.png" alt="Google Professional Cloud Architect badge" class="about-cert-badge" />
-          <div>
-            <div class="about-cert-name">Professional Cloud Architect</div>
-            <div class="about-cert-issuer">Google Cloud · Jun 2026</div>
-          </div>
-        </a>
-        <a class="about-cert-item" href="https://www.credly.com/badges/4191393f-8d3c-45ec-8a2e-1713e2dad160" target="_blank" rel="noopener">
-          <img src="../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
-          <div>
-            <div class="about-cert-name">Advanced Data Analytics</div>
-            <div class="about-cert-issuer">Google / Coursera · Apr 2026</div>
-          </div>
-        </a>
+        <img src="../assets/img/uploads/google_pca_cert.png" alt="Google Professional Cloud Architect badge" class="about-cert-badge" />
+        <div>
+          <div class="about-cert-name">Professional Cloud Architect</div>
+          <div class="about-cert-issuer">Google Cloud · Jun 2026</div>
+        </div>
+        <img src="../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
+        <div>
+          <div class="about-cert-name">Advanced Data Analytics</div>
+          <div class="about-cert-issuer">Google / Coursera · Apr 2026</div>
+        </div>
       </div>
     </section>
     <section class="about-section">
