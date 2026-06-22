@@ -1,62 +1,159 @@
 ---
-# the default layout is 'page'
 layout: page
 icon: fas fa-info-circle
 order: 4
+title: About
 ---
 
-<section class="max-w-3xl mx-auto p-6 bg-white/80 dark:bg-gray-900/60 rounded-2xl shadow-md">
-  <header class="mb-4">
-    <h2 class="text-2xl font-semibold leading-tight">Open to New Grad Software Engineering Roles - May 2026</h2>
-    <p class="mt-1 text-sm text-gray-600 dark:text-gray-300">Graduating M.S. Computer Science - Western Illinois University · Open to relocation (SF, LA, NYC)</p>
-  </header>
+<div class="about-page">
 
-  <p class="text-base mb-4">I'm excited to share that I'll be graduating in <strong>May 2026</strong> and am actively seeking <strong>New Grad Software Engineering</strong> roles starting Summer 2026.</p>
-
-  <ul class="list-disc pl-5 space-y-2 mb-4 text-gray-800 dark:text-gray-200">
-    <li><strong>Built scalable systems</strong> at NAVER - fan engagement app (100K+ MAU, 50K DAU).</li>
-    <li><strong>Optimized payments microservices</strong> at MoMo - reduced latency 1.2s → 100ms for millions of users.</li>
-    <li>Personal projects: <a href="https://github.com/gamer2810/steam-miniprofile" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Steam MiniProfile Widget</a> (adopted by 100+ sites), <a href="https://shopping.k3k.dev" target="_blank" rel="noopener noreferrer" class="text-sky-600 hover:underline">Shopping Tracker</a>.</li>
-  </ul>
-
-  <div class="mb-4">
-    <h3 class="text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Tech stack</h3>
-    <p class="flex flex-wrap gap-2">
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Java</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Kotlin</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Go</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Python</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Spring Boot</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Kubernetes</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">gRPC</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Kafka</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">Redis</span>
-      <span class="px-2 py-1 bg-gray-100 dark:bg-gray-800 rounded-full text-sm">GCP</span>
+  <div class="about-hero">
+    <div class="about-metrics">
+      <span>100K+ MAU</span>
+      <span class="about-metrics-sep">·</span>
+      <span>1.2s → 100ms</span>
+      <span class="about-metrics-sep">·</span>
+      <span>4.0 GPA</span>
+    </div>
+    <h1 class="about-name">Kha (Kai) Tran</h1>
+    <p class="about-title-line">Software Engineer &amp; Google Professional Cloud Architect</p>
+    <p class="about-status-line">
+      <span class="about-status-badge">Open to Work</span>
+      New grad &middot; Backend · Data · AI roles &middot; OPT authorized &middot; Open to relocation
+    </p>
+    <p class="about-contact">
+      <a href="mailto:khatranminh98us@gmail.com">khatranminh98us@gmail.com</a>
+      &ensp;&middot;&ensp;
+      <a href="https://github.com/gamer2810" target="_blank" rel="noopener">GitHub</a>
+      &ensp;&middot;&ensp;
+      <a href="https://www.linkedin.com/in/kha-3k-tran/" target="_blank" rel="noopener">LinkedIn</a>
+      &ensp;&middot;&ensp;
+      <a href="https://www.credly.com/users/mkt" target="_blank" rel="noopener">Credly</a>
     </p>
   </div>
 
-  <footer class="pt-4 border-t border-gray-100 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center sm:justify-between">
-    <p class="text-sm text-gray-600 dark:text-gray-400 mb-3 sm:mb-0">Open to connect - email: <a href="mailto:khatranminh98us@gmail.com" class="text-sky-600 hover:underline">khatranminh98us@gmail.com</a></p>
-    <div class="text-sm text-gray-700 dark:text-gray-300">
-      <span class="mr-2">#OpenToWork</span>
-      <span class="mr-2">#NewGrad2026</span>
-      <span class="mr-2">#SoftwareEngineering</span>
-      <span>#Backend</span>
-    </div>
-  </footer>
-</section>
+  <div class="about-body">
 
-## Resume
+    <section class="about-section">
+      <h2 class="about-section-title">Experience</h2>
+      <div class="about-exp-list">
+        <div class="about-exp-item">
+          <div class="about-exp-header">
+            <span class="about-exp-company">NAVER Corporation</span>
+            <span class="about-exp-period">2023</span>
+          </div>
+          <div class="about-exp-role">Software Engineer Intern</div>
+          <div class="about-exp-impact">Built a fan engagement platform serving <strong>100K+ MAU and 50K DAU</strong>. Designed scalable backend services to handle real-time interactions at consumer scale.</div>
+        </div>
+        <div class="about-exp-item">
+          <div class="about-exp-header">
+            <span class="about-exp-company">MoMo (M_Service)</span>
+            <span class="about-exp-period">2022 – 2023</span>
+          </div>
+          <div class="about-exp-role">Software Engineer</div>
+          <div class="about-exp-impact">Optimized payments microservices for Vietnam's largest e-wallet, reducing end-to-end latency from <strong>1.2s to 100ms</strong> for millions of users.</div>
+        </div>
+        <div class="about-exp-item">
+          <div class="about-exp-header">
+            <span class="about-exp-company">Western Illinois University</span>
+            <span class="about-exp-period">Fall 2025 – Spring 2026</span>
+          </div>
+          <div class="about-exp-role">Teaching Assistant &amp; Teaching Support Assistant</div>
+          <div class="about-exp-impact">Designed and taught CS101 curriculum for interdisciplinary students (music, LEJA, emergency management). Tutored graduate students in Computer Graphics and Computer Architecture alongside undergrad programming courses.</div>
+        </div>
+      </div>
+    </section>
 
-<a href="../assets/resume/mktran-resume-summer2026.pdf" download="mktran_resume.pdf">Download as PDF</a>
+    <section class="about-section">
+      <h2 class="about-section-title">Education</h2>
+      <div class="about-edu-list">
+        <div class="about-edu-item">
+          <div class="about-edu-header">
+            <span class="about-edu-school">Western Illinois University</span>
+            <span class="about-edu-period">May 2026</span>
+          </div>
+          <div class="about-edu-degree">M.S. Computer Science &mdash; <strong>4.0 GPA</strong></div>
+          <div class="about-edu-detail">Capstone: EduKai &mdash; AI tutoring platform (LangGraph multi-agent · RAG pipeline · FSRS scheduling)</div>
+        </div>
+      </div>
+    </section>
 
-<div>
-<embed 
-  frameBorder="0"
-  scrolling="auto"
-  height="1000px"
-  width="800px"
-  type="application/pdf"
-  src="../assets/resume/mktran-resume-summer2026.pdf"
-  alt="Resume PDF preview"
-/>
+    <section class="about-section">
+      <h2 class="about-section-title">Certifications</h2>
+      <div class="about-cert-list">
+        <a class="about-cert-item" href="https://www.credly.com/users/mkt" target="_blank" rel="noopener">
+          <img src="../assets/img/uploads/google_pca_cert.png" alt="Google Professional Cloud Architect badge" class="about-cert-badge" />
+          <div>
+            <div class="about-cert-name">Professional Cloud Architect</div>
+            <div class="about-cert-issuer">Google Cloud · Jun 2026</div>
+          </div>
+        </a>
+        <a class="about-cert-item" href="https://www.credly.com/badges/4191393f-8d3c-45ec-8a2e-1713e2dad160" target="_blank" rel="noopener">
+          <img src=../assets/img/uploads/google_data_cert.png" alt="Google Advanced Data Analytics badge" class="about-cert-badge" />
+          <div>
+            <div class="about-cert-name">Advanced Data Analytics</div>
+            <div class="about-cert-issuer">Google / Coursera · Apr 2026</div>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2 class="about-section-title">Stack</h2>
+      <div class="about-stack">
+        <div class="about-stack-group">
+          <span class="about-stack-label">Languages</span>
+          <div class="about-stack-chips">
+            <span class="about-chip">Java</span>
+            <span class="about-chip">Kotlin</span>
+            <span class="about-chip">Go</span>
+            <span class="about-chip">Python</span>
+          </div>
+        </div>
+        <div class="about-stack-group">
+          <span class="about-stack-label">Backend</span>
+          <div class="about-stack-chips">
+            <span class="about-chip">Spring Boot</span>
+            <span class="about-chip">gRPC</span>
+            <span class="about-chip">Kafka</span>
+            <span class="about-chip">Redis</span>
+          </div>
+        </div>
+        <div class="about-stack-group">
+          <span class="about-stack-label">Cloud &amp; Infra</span>
+          <div class="about-stack-chips">
+            <span class="about-chip">GCP</span>
+            <span class="about-chip">Kubernetes</span>
+            <span class="about-chip">Docker</span>
+            <span class="about-chip">Terraform</span>
+          </div>
+        </div>
+        <div class="about-stack-group">
+          <span class="about-stack-label">AI / ML</span>
+          <div class="about-stack-chips">
+            <span class="about-chip">LangGraph</span>
+            <span class="about-chip">RAG</span>
+            <span class="about-chip">Vertex AI</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section">
+      <h2 class="about-section-title">Resume</h2>
+      <a href="../assets/resume/MinhKhaTran_resume_SWE.pdf" download="mktran_resume.pdf" class="about-resume-btn">
+        <i class="fas fa-download me-2"></i>Download PDF
+      </a>
+      <div class="about-resume-embed">
+        <embed
+          frameborder="0"
+          scrolling="auto"
+          type="application/pdf"
+          src="../assets/resume/MinhKhaTran_resume_SWE.pdf"
+          alt="Resume PDF"
+        />
+      </div>
+    </section>
+
+  </div>
+</div>

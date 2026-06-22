@@ -4,5 +4,8 @@
       "Bash(grep -E \"^-.*\\\\.\\(md|html\\)$\")",
       "WebFetch(domain:decapcms.org)"
     ]
+  },
+  "enabledPlugins": {
+    "frontend-design@claude-plugins-official": true
   }
 }

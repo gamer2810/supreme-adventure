@@ -16,10 +16,10 @@ timezone: Etc/GMT+5
 
 title: Kai's Archive # the main title
 
-tagline: Computer Science student pursuing my Master's at Western Illinois University. Open to internship opportunities. # it will display as the sub-title
+tagline: Software Engineer · Google Professional Cloud Architect · M.S. Computer Science # it will display as the sub-title
 
 description: >- # used by seo meta and the atom feed
-  A Computer Science student pursuing a Master's Degree. Will write just about anything.
+  Software engineer with experience building systems at scale (NAVER, MoMo). Google Professional Cloud Architect. M.S. Computer Science, WIU (4.0 GPA). Open to backend, data, and AI roles.
 
 # Fill in the protocol & hostname for your site.
 # e.g. 'https://username.github.io', note that it does not end with a '/'.

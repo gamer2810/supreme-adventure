@@ -12,30 +12,48 @@ sections:
   #       alt: "GitHub Streak"
   #       size: lg    # full row
 
+  - title: "Education"
+    type: certifications
+    items:
+      - title: "M.S. Computer Science · 4.0 GPA"
+        issuer: "Western Illinois University"
+        date: "2026-05"
+        size: lg
+        link: "https://www.wiu.edu/cas/computer_sciences/"
+
   - title: "Certifications"
     type: certifications
     items:
-      - title: "Implement Load Balancing on Compute Engine Skill Badge"
+      - title: "Professional Cloud Architect"
         issuer: "Google Cloud"
-        date: "2026-05-03"
+        date: "2026-06-12"
         size: sm
-        image: "https://images.credly.com/images/eea11cba-2a98-4bbe-bad2-447878dd34a2/image.png"
-        link: "https://www.credly.com/badges/38db9dee-dcb4-4b5b-a123-e0c4ae7aa7a0"
+        image: "../assets/img/uploads/google_pca_cert.png"
+        link: "https://www.credly.com/users/mkt"
       - title: "Google Advanced Data Analytics Professional Certificate"
         issuer: "Coursera"
         date: "2026-04-26"
         size: sm
-        image: "https://images.credly.com/images/861df0cf-62e2-42d5-9980-3aed808cc462/blob"
+        image: "../assets/img/uploads/google_data_cert.png"
         link: "https://www.credly.com/badges/4191393f-8d3c-45ec-8a2e-1713e2dad160"
+
   - title: "Featured Works"
     type: projects
     items:
+      - title: "EduKai"
+        description: >
+          AI tutoring platform built as M.S. capstone at WIU. LangGraph multi-agent
+          system with a RAG pipeline for context-grounded answers and FSRS
+          spaced-repetition scheduling to surface material at the right time.
+        size: lg
+        links:
+          - label: "Read Post"
+            url: "/posts/graduating-from-wiu-with-my-mscs/"
       - title: "Steam MiniProfile Widget"
         description: >
           Embeddable Steam profile widget adopted by 100+ sites.
           Displays real-time Steam status, avatar, and game activity via an iframe.
-        # image: "/assets/img/uploads/steam-miniprofile.png"
-        size: md   # 2 of 3 columns
+        size: md
         links:
           - label: "GitHub"
             url: "https://github.com/gamer2810/steam-miniprofile"
@@ -43,8 +61,7 @@ sections:
         description: >
           Price-tracking web app that monitors product listings
           and notifies when prices drop to a target threshold.
-        # image: "/assets/img/preview/preview.jpg"
-        size: sm   # 1 of 3 columns — fills the remaining column
+        size: sm
         links:
           - label: "Visit Site"
             url: "https://shopping.k3k.dev"

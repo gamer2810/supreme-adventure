@@ -1,0 +1,363 @@
+/*
+ * About page
+ */
+
+.about-page {
+  max-width: 780px;
+  margin: 0 auto;
+  padding-bottom: 3rem;
+}
+
+/* ── Hero ───────────────────────────────────────────────────────── */
+
+.about-hero {
+  padding: 2rem 0 2rem;
+  border-bottom: 2px solid var(--main-border-color);
+  margin-bottom: 2.5rem;
+}
+
+.about-metrics {
+  font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--link-color);
+  letter-spacing: 0.02em;
+  margin-bottom: 1.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 0;
+  align-items: center;
+}
+
+.about-metrics-sep {
+  margin: 0 0.6rem;
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+.about-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--heading-color);
+  margin-bottom: 0.25rem;
+  line-height: 1.2;
+}
+
+.about-title-line {
+  font-size: 1.05rem;
+  color: var(--text-muted-highlight-color, var(--text-color));
+  margin-bottom: 0.75rem;
+}
+
+.about-status-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted-color);
+  margin-bottom: 0.75rem;
+}
+
+.about-status-badge {
+  display: inline-block;
+  padding: 0.15rem 0.6rem;
+  border-radius: 999px;
+  background-color: var(--link-color);
+  color: var(--main-bg);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.about-contact {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+/* ── Sections ──────────────────────────────────────────────────── */
+
+.about-section {
+  margin-bottom: 2.5rem;
+}
+
+.about-section-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--main-border-color);
+}
+
+/* ── Experience ─────────────────────────────────────────────────── */
+
+.about-exp-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.about-exp-item {
+  padding-left: 1rem;
+  border-left: 3px solid var(--main-border-color);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-left-color: var(--link-color);
+  }
+}
+
+.about-exp-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.about-exp-company {
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1rem;
+}
+
+.about-exp-period {
+  font-size: 0.8rem;
+  color: var(--text-muted-color);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.about-exp-role {
+  font-size: 0.9rem;
+  color: var(--link-color);
+  margin-bottom: 0.35rem;
+}
+
+.about-exp-impact {
+  font-size: 0.88rem;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* ── Education ──────────────────────────────────────────────────── */
+
+.about-edu-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.about-edu-item {
+  padding-left: 1rem;
+  border-left: 3px solid var(--main-border-color);
+  transition: border-color 0.2s ease;
+
+  &:hover {
+    border-left-color: var(--link-color);
+  }
+}
+
+.about-edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  margin-bottom: 0.1rem;
+}
+
+.about-edu-school {
+  font-weight: 700;
+  color: var(--heading-color);
+  font-size: 1rem;
+}
+
+.about-edu-period {
+  font-size: 0.8rem;
+  color: var(--text-muted-color);
+  font-family: 'SFMono-Regular', Consolas, monospace;
+}
+
+.about-edu-degree {
+  font-size: 0.9rem;
+  color: var(--text-color);
+  margin-bottom: 0.2rem;
+}
+
+.about-edu-detail {
+  font-size: 0.85rem;
+  color: var(--text-muted-color);
+  line-height: 1.5;
+}
+
+/* ── Certifications ─────────────────────────────────────────────── */
+
+.about-cert-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.about-cert-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--main-border-color);
+  border-radius: 10px;
+  background-color: var(--card-bg);
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  min-width: 220px;
+  flex: 1 1 220px;
+  max-width: 340px;
+
+  &:hover {
+    border-color: var(--link-color);
+    transform: translateY(-2px);
+    box-shadow: var(--card-shadow);
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.about-cert-badge {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+.about-cert-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--heading-color);
+  line-height: 1.3;
+}
+
+.about-cert-issuer {
+  font-size: 0.78rem;
+  color: var(--text-muted-color);
+  margin-top: 0.15rem;
+}
+
+/* ── Stack ──────────────────────────────────────────────────────── */
+
+.about-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.about-stack-group {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.about-stack-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-muted-color);
+  min-width: 90px;
+  padding-top: 0.2rem;
+  flex-shrink: 0;
+}
+
+.about-stack-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.about-chip {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  border-radius: 6px;
+  background-color: var(--card-bg);
+  border: 1px solid var(--main-border-color);
+  font-size: 0.82rem;
+  color: var(--text-color);
+}
+
+/* ── Resume ─────────────────────────────────────────────────────── */
+
+.about-resume-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.45rem 1rem;
+  border: 1px solid var(--link-color);
+  border-radius: 6px;
+  color: var(--link-color);
+  text-decoration: none;
+  font-size: 0.88rem;
+  margin-bottom: 1.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+    background-color: var(--link-color);
+    color: var(--main-bg);
+    text-decoration: none;
+  }
+}
+
+.about-resume-embed {
+  embed {
+    display: block;
+    width: 100%;
+    height: 900px;
+    border: 1px solid var(--main-border-color);
+    border-radius: 10px;
+  }
+}
+
+/* ── Responsive ─────────────────────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .about-name {
+    font-size: 1.6rem;
+  }
+
+  .about-metrics {
+    font-size: 0.95rem;
+  }
+
+  .about-metrics-sep {
+    margin: 0 0.35rem;
+  }
+
+  .about-stack-group {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .about-stack-label {
+    min-width: unset;
+  }
+
+  .about-cert-item {
+    max-width: 100%;
+  }
+
+  .about-resume-embed embed {
+    height: 500px;
+  }
+}
