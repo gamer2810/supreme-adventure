@@ -207,25 +207,23 @@
 /* ── Certifications ─────────────────────────────────────────────── */
 
 .about-cert-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, max-content));
+  gap: 0.75rem;
 }
 
 .about-cert-item {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  padding: 0.75rem 1rem;
+  padding: 0.7rem 1rem;
   border: 1px solid var(--main-border-color);
   border-radius: 10px;
   background-color: var(--card-bg);
   text-decoration: none;
   color: inherit;
   transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
-  min-width: 220px;
-  flex: 1 1 220px;
-  max-width: 340px;
+  width: fit-content;
 
   &:hover {
     border-color: var(--link-color);

@@ -26,7 +26,6 @@ title: About
   </div>
 
   <div class="about-body">
-
     <section class="about-section">
       <h2 class="about-section-title">Experience</h2>
       <div class="about-exp-list">
@@ -56,7 +55,6 @@ title: About
         </div>
       </div>
     </section>
-
     <section class="about-section">
       <h2 class="about-section-title">Education</h2>
       <div class="about-edu-list">
@@ -73,11 +71,10 @@ title: About
             <span class="about-edu-school">VNUHCM - University of Science</span>
             <span class="about-edu-period">2020</span>
           </div>
-          <div class="about-edu-degree">B.S. Computer Science &mdash; </div>
+          <div class="about-edu-degree">B.S. Computer Science</div>
         </div>
       </div>
     </section>
-
     <section class="about-section">
       <h2 class="about-section-title">Certifications</h2>
       <div class="about-cert-list">
@@ -97,7 +94,6 @@ title: About
         </a>
       </div>
     </section>
-
     <section class="about-section">
       <h2 class="about-section-title">Stack</h2>
       <div class="about-stack">
@@ -138,7 +134,6 @@ title: About
         </div>
       </div>
     </section>
-
     <section class="about-section">
       <h2 class="about-section-title">Resume</h2>
       <a href="../assets/resume/MinhKhaTran_resume_SWE.pdf" download="mktran_resume.pdf" class="about-resume-btn">
